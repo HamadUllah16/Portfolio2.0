@@ -16,9 +16,9 @@ function NavItems({ navItems }: { navItems: { link: string, title: string }[] })
 
                 return (
                     <Link
+                        key={nav.link}
                         href={nav.link}>
                         <Button
-                            key={nav.link} // Add a key prop to avoid React warnings
                             variant={isActive ? 'active' : 'inactive'}
                         >
                             {nav.title}
