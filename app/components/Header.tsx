@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 const pfp = '/pfp.jpg'
@@ -12,7 +13,7 @@ function Header() {
 
             {/* profile picture, personal info and stats comp */}
             <div className='px-14 flex gap-8 relative py-4'>
-                <div className=' w-60 h-60 rounded-3xl z-10 bg-slate-500 absolute bottom-0 overflow-hidden shadow-lg'>
+                <div style={{ borderRadius: '50px' }} className=' w-60 h-60 z-10 bg-slate-500 absolute bottom-0 overflow-hidden shadow-lg'>
                     <Image
                         src={pfp}
                         alt='a profile picture'
@@ -29,16 +30,29 @@ function Header() {
                         Hamad Ullah
                     </h3>
                     <h6 className='max-w-80 text-sm'>
-                        Software Engineer specialized in Front-End Development and Decentralized Applications
+                        Software Engineer specialized in Front-End Development and Decentralized Applications.
                     </h6>
                     <div className='flex gap-2'>
-                        <Button>
-                            Resume
-                        </Button>
-                        <Button variant={'outline'}>
-                            GitHub
-                        </Button>
+                        <a href={'https://drive.google.com/drive/folders/1qfen1IlVD3V-dI6xLf25zWJ8G16kPIeh?usp=sharing'} target='_blank'>
+                            <Button>
+                                Resume
+                            </Button>
+                        </a>
+                        <a href='https://github.com/HamadUllah16' target='_blank'>
+                            <Button variant={'outline'}>
+                                <Github />
+                            </Button>
+                        </a>
+
+                        <a href='https://www.linkedin.com/in/hamadullah16/' target='_blank'>
+                            <Button variant={'outline'}>
+                                <Linkedin />
+                            </Button>
+                        </a>
                     </div>
+                </div>
+
+                <div className='flex items-end'>
                 </div>
 
             </div>

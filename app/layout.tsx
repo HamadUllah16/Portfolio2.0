@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import RightClickContextMenu from "./components/RightClickContextMenu";
+import ReduxProvider from "./redux/ReduxProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,13 +32,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <RightClickContextMenu>
-          <div className="flex flex-col gap-6">
-            <Header />
-            <Navbar />
-            {children}
-          </div>
-        </RightClickContextMenu>
+        <ReduxProvider>
+
+          <RightClickContextMenu>
+            <div className="flex flex-col gap-6">
+              <Header />
+              <Navbar />
+              {children}
+            </div>
+          </RightClickContextMenu>
+
+        </ReduxProvider>
       </body>
     </html>
   );
