@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 type WorkItem = {
   id: number;
@@ -53,21 +54,21 @@ export default function Home() {
 
             {/* Texts */}
             <div className="flex flex-col gap-2">
-              <div className='bg-red-400 w-fit rounded-3xl overflow-hidden'>
-                <Image
+              <div className='bg-red-400 w-80 h-60 rounded-3xl overflow-hidden '>
+                {/* <Image
                   src={work.image ?? ''}
                   alt='a screenshot of application'
                   width={300}
                   height={300}
-                />
+                /> */}
               </div>
               <h3 className="font-bold text-lg">{work.title}</h3>
               <p>{work.description}</p>
               <div className="flex flex-wrap gap-2">
                 {work.technologies.map((tech: any, index: number) => (
-                  <span key={index} className="bg-gray-200 px-2 py-1 rounded">
+                  <Button key={index} variant={'outline'} className='bg-slate-200 capitalize'>
                     {tech}
-                  </span>
+                  </Button>
                 ))}
               </div>
             </div>

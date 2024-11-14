@@ -13,13 +13,16 @@ function Header() {
 
             {/* profile picture, personal info and stats comp */}
             <div className='px-14 flex gap-8 relative py-4'>
-                <div style={{ borderRadius: '50px' }} className=' w-60 h-60 z-10 bg-slate-500 absolute bottom-0 overflow-hidden shadow-lg'>
+                <div style={{ borderRadius: '70px', }} className=' w-60 h-60 z-10 absolute bottom-0 overflow-hidden '>
                     <Image
                         src={pfp}
                         alt='a profile picture'
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'cover', padding: '8px', borderRadius: '70px', zIndex: 1000 }}
                     />
+                    <div
+                        className='w-full h-full inset-0 rounded-full blur-lg bg-gradient-to-r bg-white opacity-75'
+                    ></div>
                 </div>
 
                 <div className='w-60 h-36 bg-transparent'>

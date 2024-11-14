@@ -5,17 +5,21 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import RightClickContextMenu from "./components/RightClickContextMenu";
 import ReduxProvider from "./redux/ReduxProvider";
+import { Inter, Roboto, Poppins } from 'next/font/google';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const inter = Inter({
+//   subsets: ['latin']
+// })
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['300', '700']
+})
+
+const poppins = Poppins({
+  weight: ['300', '700'],
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.className} antialiased`}
       >
         <ReduxProvider>
 
