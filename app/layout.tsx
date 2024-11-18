@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import RightClickContextMenu from "./components/RightClickContextMenu";
 import ReduxProvider from "./redux/ReduxProvider";
 import { Poppins } from 'next/font/google';
-import { Toaster } from "@/app/components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 import CopyEmail from "./components/CopyEmail";
 import InitialLoading from "./components/InitialLoading";
 
