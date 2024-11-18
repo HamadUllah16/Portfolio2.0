@@ -1,8 +1,8 @@
 'use client'
-import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { Button } from './ui/button';
 
 function WorkCard({ work }: { work: { id: string, image: string, github: string, preview: string, title: string, description: string, technologies: string[] } }) {
     const [show, setShow] = useState(false);
