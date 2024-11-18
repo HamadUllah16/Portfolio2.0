@@ -6,6 +6,7 @@ import { RootState } from '../redux/store'
 
 function Navbar() {
     const { allWork } = useSelector((state: RootState) => state.work);
+
     return (
         <div className='px-14'>
             <div className='relative overflow-clip'>

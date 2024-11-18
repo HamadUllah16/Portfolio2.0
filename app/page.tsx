@@ -3,22 +3,14 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-
-type WorkItem = {
-  id: number;
-  title: string;
-  description: string;
-  technologies: string[];
-};
+import WorkCard from './components/WorkCard';
 
 export default function Home() {
   const { allWork } = useSelector((state: RootState) => state.work)
   const [error, setError] = useState<string | null>(null);
   const dispatch = useDispatch<AppDispatch>();
 
-  // Fetch all work items from the API
+  // Fetching all work items from the API
   const getAllWork = async () => {
     try {
       const response = await fetch('/api/work', { method: 'GET' });
@@ -35,44 +27,26 @@ export default function Home() {
     }
   };
 
-  // Fetch data on component mount
+
   useEffect(() => {
-    getAllWork()
-      .then((data) => {
-        if (data) dispatch(setAllWork(data));
-      })
-      .catch((err) => console.error(err));
+    if (allWork.length === 0) {
+      getAllWork()
+        .then((data) => {
+          if (data) dispatch(setAllWork(data));
+        })
+        .catch((err) => console.log(err));
+    }
   }, [allWork.length]);
 
   return (
-    <div className='px-14'>
+    <div className='px-14 flex gap-5 flex-wrap'>
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
         allWork.map((work: any) => (
-          <div key={work.id} className="mb-4">
-            {/* <img src={work.imageUrl} alt={work.title} /> */}
-
-            {/* Texts */}
-            <div className="flex flex-col gap-2">
-              <div className='bg-red-400 w-80 h-60 rounded-3xl overflow-hidden '>
-                {/* <Image
-                  src={work.image ?? ''}
-                  alt='a screenshot of application'
-                  width={300}
-                  height={300}
-                /> */}
-              </div>
-              <h3 className="font-bold text-lg">{work.title}</h3>
-              <p>{work.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {work.technologies.map((tech: any, index: number) => (
-                  <Button key={index} variant={'outline'} className='bg-slate-200 capitalize'>
-                    {tech}
-                  </Button>
-                ))}
-              </div>
-            </div>
-          </div>
+          <WorkCard
+            key={work.id}
+            work={work}
+          />
         ))
       ) : (
         <p>No work items found</p>

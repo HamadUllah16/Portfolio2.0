@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import RightClickContextMenu from "./components/RightClickContextMenu";
 import ReduxProvider from "./redux/ReduxProvider";
-import { Inter, Roboto, Poppins } from 'next/font/google';
-
-// const inter = Inter({
-//   subsets: ['latin']
-// })
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['300', '700']
-})
+import { Poppins } from 'next/font/google';
+import { Toaster } from "@/components/ui/sonner";
+import CopyEmail from "./components/CopyEmail";
+import InitialLoading from "./components/InitialLoading";
 
 const poppins = Poppins({
   weight: ['300', '700'],
@@ -37,7 +30,9 @@ export default function RootLayout({
         className={`${poppins.className} antialiased`}
       >
         <ReduxProvider>
-
+          <Toaster position="top-center" />
+          <CopyEmail />
+          <InitialLoading />
           <RightClickContextMenu>
             <div className="flex flex-col gap-6">
               <Header />

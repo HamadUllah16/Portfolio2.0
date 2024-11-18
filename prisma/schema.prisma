@@ -18,8 +18,10 @@ model Work {
   id           Int      @id @default(autoincrement())
   image        String   @default("")
   title        String   @db.VarChar(255)
-  description  String?
+  description  String?  @default("")
   technologies String[]
+  github       String   @default("")
+  preview      String   @default("")
 }
 
 model Experience {

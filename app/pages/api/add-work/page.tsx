@@ -1,21 +1,24 @@
 'use client'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Terminal, Verified, VerifiedIcon } from 'lucide-react';
-import { CldUploadButton } from 'next-cloudinary';
+import { CldUploadButton, } from 'next-cloudinary';
 import { useState } from 'react';
+import { toast } from 'sonner';
+
 
 export default function UploadWorkForm() {
     const [imageUrl, setImageUrl] = useState<string>('');
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [technologies, setTechnologies] = useState('');
+    const [github, setGithub] = useState('');
+    const [preview, setPreview] = useState('');
+
     const handleImageUpload = (result: any) => {
         if (result?.info?.secure_url) {
-            console.log(result?.info?.secure_url)
+            console.log(result.info.secure_url);
             setImageUrl(result.info.secure_url);
         }
     };
@@ -33,13 +36,13 @@ export default function UploadWorkForm() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ title, image: imageUrl, description, technologies }),
+            body: JSON.stringify({ title, image: imageUrl, description, technologies, github, preview }),
         });
 
         if (response.ok) {
-            alert('Success, work added.')
+            toast.success('Success, work added.')
         } else {
-            alert('Failed to add work');
+            toast.error('Error, could not add work.')
         }
     };
 
@@ -62,7 +65,7 @@ export default function UploadWorkForm() {
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             placeholder="Description"
-                            required
+
                         />
                         <Input
                             type="text"
@@ -71,13 +74,27 @@ export default function UploadWorkForm() {
                             placeholder="Technologies (comma separated)"
                             required
                         />
+                        <Input
+                            type="text"
+                            value={github}
+                            onChange={(e) => setGithub(e.target.value)}
+                            placeholder="www.github.com/HamadUllah16/Portfolio2.0"
+                            required
+                        />
+                        <Input
+                            type="text"
+                            value={preview}
+                            onChange={(e) => setPreview(e.target.value)}
+                            placeholder="www.hamad-portfolio.vercel.app"
+                            required
+                        />
                     </CardContent>
                     <CardFooter className='flex flex-col gap-2'>
                         <div className='flex gap-2 justify-between w-full'>
                             <CldUploadButton
                                 className='border rounded-lg border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground py-1 px-2'
                                 uploadPreset='portfolio2.0 uploads'
-                                onSuccess={handleImageUpload}
+                                onSuccess={(e) => handleImageUpload(e.info)}
                             >
                                 Upload Image
                             </CldUploadButton>

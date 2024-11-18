@@ -1,8 +1,7 @@
 import prisma from "@/prisma/client";
-import { NextApiRequest, NextApiResponse } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
 
     try {
         const allWork = await prisma.work.findMany();
@@ -14,10 +13,10 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 
 export async function POST(req: NextRequest) {
     try {
-        const { title, image, description, technologies } = await req.json();
+        const { title, image, description, technologies, github, preview } = await req.json();
 
         const work = await prisma.work.create({
-            data: { title, description, image, technologies: technologies.split(', ') },
+            data: { title, description, image, technologies: technologies.split(', '), github, preview },
         });
 
         return NextResponse.json({ message: 'Work added successfully', work }, { status: 200 });
