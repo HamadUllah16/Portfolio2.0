@@ -11,33 +11,31 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
     return (
         <div
             key={work.id}
-            className="mb-4 border bg-secondary relative rounded-lg overflow-hidden"
+            className="mb-4 border bg-secondary rounded-lg "
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
         >
-
-            <div
-                className={`${show ? 'opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} bg-red-400 flex gap-2 items-center justify-center h-full w-full absolute transition-all duration-300 ease-in-out`}
-            >
-                <Link href={work?.github} target='_blank'>
-                    <Button variant={'outline'}>
-                        GitHub
-                    </Button>
-                </Link>
-                <Link href={work?.preview} target='_blank'>
-                    <Button>
-                        Preview
-                    </Button>
-                </Link>
-            </div>
-
 
             {/* Texts */}
             <div className="flex gap-4 p-2 w-full h-full">
 
                 <div
-                    className=' bg-red-400 flex h-52 w-52 rounded-md'
+                    className=' bg-red-400 flex h-52 w-52 rounded-md relative overflow-hidden'
                 >
+                    <div
+                        className={`${show ? 'opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} bg-red-400 flex gap-2 items-center justify-center h-full w-full absolute transition-all duration-300 ease-in-out`}
+                    >
+                        <Link href={work?.github} target='_blank'>
+                            <Button variant={'outline'}>
+                                GitHub
+                            </Button>
+                        </Link>
+                        <Link href={work?.preview} target='_blank'>
+                            <Button>
+                                Preview
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
                 <div className='flex flex-col gap-2 h-52 w-52 justify-center relative'>
                     <LinkIcon className='absolute right-0 top-0' size={'12px'} />
