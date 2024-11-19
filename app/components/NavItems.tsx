@@ -5,8 +5,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store';
 import { setAllWork, setLoading } from '../redux/features/work';
-import { Skeleton } from './ui/skeleton';
-import { Button } from './ui/button';
+import { Skeleton } from '../../components/ui/skeleton';
+import { Button } from '../../components/ui/button';
 
 
 function NavItems({ navItems }: { navItems: { link: string, title: string, count: number | null }[] }) {

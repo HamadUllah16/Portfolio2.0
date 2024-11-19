@@ -1,8 +1,8 @@
 'use client'
 import Link from 'next/link';
 import React, { useState } from 'react'
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
+import { Button } from '../../components/ui/button';
+import { Badge } from '../../components/ui/badge';
 import { LinkIcon } from 'lucide-react';
 
 

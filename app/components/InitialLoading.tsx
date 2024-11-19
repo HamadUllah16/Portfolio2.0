@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Progress } from './ui/progress';
+import { Progress } from '../../components/ui/progress';
 
 export default function InitialLoading() {
     const [progress, setProgress] = useState(0);
