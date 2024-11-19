@@ -22,7 +22,7 @@ function ExperiencePage() {
 
                     <Experience
                         img={upwork}
-                        from='May 2022'
+                        from='Sep 2021'
                         to='Now'
                         techstack={['HTML', 'CSS', 'SQL', 'WordPress']}
                     />

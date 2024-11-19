@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { Badge } from './ui/badge'
 
 function Experience({ img, from, to, techstack }: { img: string, from: string, to: string, techstack: string[] }) {
     return (
@@ -35,9 +36,10 @@ function Experience({ img, from, to, techstack }: { img: string, from: string, t
                 <div className='flex gap-1'>
                     {techstack.map((tech, index) => {
                         return (
-                            <div key={index} className='px-2 py-1 text-xs bg-input rounded-lg'>
+                            // className='px-2 py-1 text-xs bg-input rounded-lg'
+                            <Badge key={index} variant={'default'}>
                                 {tech}
-                            </div>
+                            </Badge>
 
                         )
                     })}
