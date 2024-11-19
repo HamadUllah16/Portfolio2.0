@@ -30,6 +30,11 @@
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
+  "overrides": {
+    "@radix-ui/react-icons": {
+      "react": "$react"
+    }
+  },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
