@@ -1,31 +1,29 @@
 'use client'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import Link from 'next/link';
 import React, { useState } from 'react'
+import { Button } from '../../components/ui/button';
+import { Badge } from '../../components/ui/badge';
+import { LinkIcon } from 'lucide-react';
+
 
 function WorkCard({ work }: { work: { id: string, image: string, github: string, preview: string, title: string, description: string, technologies: string[] } }) {
     const [show, setShow] = useState(false);
     return (
-        <div key={work.id} className="mb-4 max-w-80">
-            {/* <img src={work.imageUrl} alt={work.title} /> */}
+        <div
+            key={work.id}
+            className="mb-4 border bg-secondary rounded-lg "
+            onMouseEnter={() => setShow(true)}
+            onMouseLeave={() => setShow(false)}
+        >
 
             {/* Texts */}
-            <div className="flex flex-col gap-2">
+            <div className="flex gap-4 p-2 w-full h-full">
+
                 <div
-                    className='flex items-center justify-center relative w-80 h-auto rounded-3xl overflow-hidden '
-                    onMouseEnter={() => setShow(true)}
-                    onMouseLeave={() => setShow(false)}
+                    className=' bg-red-400 flex h-52 w-52 rounded-md relative overflow-hidden'
                 >
-                    <Image
-                        src={work.image ?? ''}
-                        alt='a screenshot of application'
-                        width={320}
-                        height={180}
-                        style={{ objectFit: 'contain', borderRadius: '12px' }}
-                    />
                     <div
-                        className={`${show ? 'opacity-100 z-50 bg-opacity-10' : 'opacity-0 bg-opacity-0 z-0'} bg-white flex gap-2 items-center justify-center absolute w-full h-full transition-all duration-300 ease-in-out`}
+                        className={`${show ? 'opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} bg-red-400 flex gap-2 items-center justify-center h-full w-full absolute transition-all duration-300 ease-in-out`}
                     >
                         <Link href={work?.github} target='_blank'>
                             <Button variant={'outline'}>
@@ -39,14 +37,22 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
                         </Link>
                     </div>
                 </div>
-                <h3 className="font-bold text-lg">{work.title}</h3>
-                <p>{work.description}</p>
-                <div className="flex flex-wrap gap-1">
-                    {work.technologies.map((tech, index: number) => (
-                        <Button key={index} variant={'outline'} className='bg-slate-200 capitalize'>
-                            {tech}
-                        </Button>
-                    ))}
+                <div className='flex flex-col gap-2 h-52 w-52 justify-center relative'>
+                    <LinkIcon className='absolute right-0 top-0' size={'12px'} />
+
+                    <div className='flex gap-1 justify-between'>
+                        <h3 className="font-bold text-lg">{work.title}</h3>
+                        <Badge variant={'progress'}>In Progress</Badge>
+                    </div>
+                    <p className='text-sm'> {work.description}</p>
+                    <div className="flex flex-wrap gap-1 border-t-2 pt-2 overflow-y-scroll overflow-x-hidden">
+                        {work.technologies.map((tech, index: number) => (
+                            <Badge key={index} variant={'default'} >
+                                {tech}
+                            </Badge>
+                        ))}
+                    </div>
+
                 </div>
             </div>
         </div>
