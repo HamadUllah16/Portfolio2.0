@@ -8,7 +8,7 @@ function Navbar() {
     const { allWork } = useSelector((state: RootState) => state.work);
 
     return (
-        <div className='px-14'>
+        <div className='md:px-14 sm:px-5 max-sm:px-5'>
             <div className='relative overflow-clip'>
                 <NavItems
                     navItems={[

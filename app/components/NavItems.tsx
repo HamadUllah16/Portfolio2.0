@@ -44,7 +44,7 @@ function NavItems({ navItems }: { navItems: { link: string, title: string, count
     console.log('Current Pathname:', pathname); // Debugging to check the current path
 
     return (
-        <div className='flex gap-0 relative z-20'>
+        <div className='flex gap-0 relative z-20 flex-wrap'>
             {navItems.map((nav) => {
                 const isActive = pathname === nav.link || pathname.startsWith(`${nav.link}/`);
 

@@ -4,7 +4,7 @@ import { Badge } from '../../components/ui/badge'
 
 function Experience({ img, from, to, techstack }: { img: string, from: string, to: string, techstack: string[] }) {
     return (
-        <div className='flex px-10 relative '>
+        <div className='flex px-10 max-sm:px-5 relative '>
             <div className='rounded-lg flex flex-col items-center z-20 gap-2 bg-secondary justify-between border border-input p-3'>
                 <div className='flex gap-10'>
                     <div className='w-28 h-14 relative flex justify-start rounded-lg'>
@@ -33,7 +33,7 @@ function Experience({ img, from, to, techstack }: { img: string, from: string, t
                     </div>
                 </div>
 
-                <div className='flex gap-1'>
+                <div className='flex justify-start w-full gap-1 flex-wrap'>
                     {techstack.map((tech, index) => {
                         return (
                             // className='px-2 py-1 text-xs bg-input rounded-lg'
@@ -46,7 +46,7 @@ function Experience({ img, from, to, techstack }: { img: string, from: string, t
                 </div>
 
             </div>
-            <div className='w-5 h-5 absolute -left-3 z-40 rounded-full bg-red-400' />
+            <div className='w-5 h-5 absolute -left-3 max-sm:hidden z-50 rounded-full bg-red-400' />
         </div>
     )
 }

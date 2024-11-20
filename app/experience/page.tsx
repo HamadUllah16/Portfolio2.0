@@ -6,9 +6,9 @@ const dextro = '/dextro.png'
 function ExperiencePage() {
 
     return (
-        <div className='px-14'>
-            <div className='flex'>
-                <div className='bg-red-400 z-0  w-1' />
+        <div className='md:px-14 sm:px-5 max-sm:px-5'>
+            <div className='flex relative'>
+                <div className='bg-red-400 z-0  w-1 sm:-left-1 absolute  max-sm:absolute h-full left-10 ' />
 
                 <div className='flex flex-col gap-14 '>
 

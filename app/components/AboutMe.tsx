@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutMe() {
     return (
-        <div className='px-14 flex flex-col gap-3'>
+        <div className='md:px-14 sm:px-5 max-sm:px-5 flex flex-col gap-3'>
             <p>
                 A Software Engineer who likes to design and build amazing user interfaces and experiences.
             </p>
