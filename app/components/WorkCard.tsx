@@ -17,10 +17,10 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
         >
 
             {/* Texts */}
-            <div className="flex gap-4 p-2 w-full h-full">
+            <div className="flex flex-wrap gap-4 p-2 w-full h-full">
 
                 <div
-                    className=' bg-red-400 flex h-52 w-52 rounded-md relative overflow-hidden'
+                    className=' max-sm:hidden bg-red-400 flex h-52 w-52 rounded-md relative overflow-hidden'
                 >
                     <div
                         className={`${show ? 'opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} bg-red-400 flex gap-2 items-center justify-center h-full w-full absolute transition-all duration-300 ease-in-out`}
@@ -45,7 +45,7 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
                         <Badge variant={'progress'}>In Progress</Badge>
                     </div>
                     <p className='text-sm'> {work.description}</p>
-                    <div className="flex flex-wrap gap-1 border-t-2 pt-2 overflow-y-scroll overflow-x-hidden">
+                    <div className="flex flex-wrap gap-1 border-t-2 pt-2 overflow-y-auto overflow-x-hidden">
                         {work.technologies.map((tech, index: number) => (
                             <Badge key={index} variant={'default'} >
                                 {tech}
