@@ -51,7 +51,7 @@ function FreelanceCard() {
                         referrerPolicy='no-referrer'
                     >
                         <Button
-                            className='w-full'
+                            className='w-full rounded-md'
                             variant={'default'}
                         >
                             Hire

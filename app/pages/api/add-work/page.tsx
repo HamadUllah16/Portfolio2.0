@@ -95,7 +95,7 @@ export default function UploadWorkForm() {
                             <CldUploadButton
                                 className='border rounded-lg border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground py-1 px-2'
                                 uploadPreset='portfolio2.0 uploads'
-                                onSuccess={(e) => handleImageUpload(e.info)}
+                                onSuccess={handleImageUpload}
                             >
                                 Upload Image
                             </CldUploadButton>

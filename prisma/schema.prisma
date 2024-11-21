@@ -22,6 +22,7 @@ model Work {
   technologies String[]
   github       String   @default("")
   preview      String   @default("")
+  status       String   @default("")
 }
 
 model Experience {
