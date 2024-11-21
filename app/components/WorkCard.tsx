@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from '../../components/ui/button';
 import { Badge } from '../../components/ui/badge';
 import { LinkIcon } from 'lucide-react';
