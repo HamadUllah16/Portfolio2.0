@@ -11,7 +11,7 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
     return (
         <div
             key={work.id}
-            className="mb-4 border bg-secondary rounded-lg "
+            className="mb-4 border bg-secondary rounded-lg h-fit"
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
         >
