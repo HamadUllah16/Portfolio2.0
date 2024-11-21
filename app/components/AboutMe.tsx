@@ -1,23 +1,22 @@
-import React from 'react'
+import React from 'react';
 
 function AboutMe() {
     return (
-        <div className='md:px-14 sm:px-5 max-sm:px-5 flex flex-col gap-3'>
+        <div className="md:px-14 sm:px-5 max-sm:px-5 flex flex-col gap-3">
             <p>
-                A Software Engineer who likes to design and build amazing user interfaces and experiences.
+                I’m a <strong>Software Engineer</strong> passionate about designing and building user-centric interfaces and exceptional user experiences. My journey in tech began as a Front-End Developer in 2022, where I struggled initially with color schemes, fonts, and design principles. Over time, I grew to appreciate these details, and they now play a key role in my work.
             </p>
             <p>
-                I started my journey as a Front-End Developer in 2022. I&apos;ve been more of a hardware guy right from the get go and could not break color scheme, fonts, good design principles and some other patterns. It just wouldn&apos;t make sense to me but as I went on, I kinda figured it out.
+                In 2023, I enrolled in <strong>Meta’s Front-End Developer Specialization</strong>, sponsored by HEC. This program deepened my skills in <strong>React</strong>, <strong>Bootstrap</strong>, and <strong>CSS pre-processors</strong> through hands-on projects and rigorous assessments. Completing the specialization in six months was a rewarding challenge, capped by creating a portfolio that showcased what I’d learned. React unlocked my creativity—it showed me that frontend development is much more than "changing the color of a button"; it’s about crafting dynamic, interactive user interfaces with robust business logic.
             </p>
-
-            <p>In 2023, I enrolled into <span style={{ fontWeight: 'bold' }}>Meta&apos;s Front-End Specialization</span> through HEC Sponsorship and got the chance to learn React with other great technologies including Bootstrap, and CSS pre-processors. Thanks to the Meta&apos;s great instructors, I was able to complete the specialization within 6 months by going through weekly assessments, module assessments and a final project where we had to build a portfolio for ourselves. React is where the fun started, being able to creatively code user interface components and adding business logic to it made me realize Front-End is not all about &apos;changing the color of a button&apos;.</p>
-
-            <p>I kept on creating personal projects on React until I found about NextJs a few months after the specialization and it just couldn&apos;t get any confusing. Why am I working on static pages again? Server components on Front-End!? What&apos;s going on here. Yeah I apologize, I wasn&apos;t familiar with their game.</p>
-            <p>After reading about how it works, how React suffers with Google crawler and learned how serverless architecture works, it amazed me. I was excited to learn NextJs because why not? A single repository holding all of your application together while performing at a blazing fast speed? That&apos;s a yes yes.</p>
-
-            <p style={{ fontStyle: 'italic' }}>My current status? I&apos;m currently working on my Final Year Project, the goal is to create a <span style={{ fontWeight: 'bold' }}>Decentralized Electronic Voting Application</span> that would introduce ease in the process of voting, security, voter anoymity and of course, make the process cost effective.</p>
+            <p>
+                After honing my React skills through personal projects, I discovered <strong>Next.js</strong>—a game-changer. At first, its concepts like static pages and server components were confusing. But as I dived deeper, I realized the brilliance of its approach to <strong>serverless architecture</strong>, <strong>SEO optimization</strong>, and <strong>blazing-fast performance</strong>. The idea of managing both client and server logic in a single repository fascinated me, and I haven’t looked back since.
+            </p>
+            <p>
+                Currently, I’m focused on my <strong>Final Year Project</strong>, a <strong>Decentralized Electronic Voting Application</strong>. This project aims to make voting easier, more secure, and anonymous while reducing costs. It's a culmination of my skills and passion for building impactful applications.
+            </p>
         </div>
-    )
+    );
 }
 
-export default AboutMe
+export default AboutMe;

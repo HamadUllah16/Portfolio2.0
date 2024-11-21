@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
 import { Button } from '../../components/ui/button'
+import Link from 'next/link'
 const upwork = '/upwork.png'
 
 function FreelanceCard() {
     return (
-        <div className='flex flex-col gap-2 border border-input rounded-lg'>
-            <div className='flex w-full relative justify-center bg-secondary p-4 border-b border-input'>
+        <div className='flex flex-col gap-2 border border-input rounded-lg p-3'>
+            <div className='flex w-full relative justify-center bg-secondary p-4 rounded-md border-input'>
                 <Image
                     src={upwork}
                     width={112}
@@ -17,7 +18,7 @@ function FreelanceCard() {
                 />
             </div>
 
-            <div className='flex flex-col gap-3 p-2'>
+            <div className='flex flex-col gap-3'>
 
                 <div className='flex justify-between gap-10'>
 
@@ -43,12 +44,19 @@ function FreelanceCard() {
                 </div>
 
                 <div className='flex w-full'>
-                    <Button
+                    <Link
                         className='w-full'
-                        variant={'default'}
+                        href={'https://www.upwork.com/freelancers/~019b0b1b1406a889c6'}
+                        target='_blank'
+                        referrerPolicy='no-referrer'
                     >
-                        Hire
-                    </Button>
+                        <Button
+                            className='w-full'
+                            variant={'default'}
+                        >
+                            Hire
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@ import { Poppins } from 'next/font/google';
 import { Toaster } from "../components/ui/sonner";
 import CopyEmail from "./components/CopyEmail";
 import InitialLoading from "./components/InitialLoading";
+import Footer from "./components/Footer";
 
 const poppins = Poppins({
   weight: ['300', '700'],
@@ -33,13 +34,14 @@ export default function RootLayout({
           <Toaster position="top-center" />
           <CopyEmail />
           <InitialLoading />
-          <RightClickContextMenu>
-            <div className="flex flex-col gap-6">
-              <Header />
-              <Navbar />
-              {children}
-            </div>
-          </RightClickContextMenu>
+          {/* <RightClickContextMenu> */}
+          <div className="flex flex-col gap-6 w-svw h-svh">
+            <Header />
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+          {/* </RightClickContextMenu> */}
 
         </ReduxProvider>
       </body>

@@ -39,7 +39,7 @@ export default function Home() {
   }, [allWork.length]);
 
   return (
-    <div className='md:px-14 sm:px-5 max-sm:px-5 flex gap-5 flex-wrap'>
+    <div className='md:px-14 sm:px-5 max-sm:px-5 flex gap-5 flex-wrap h-full'>
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
         allWork.map((work: any) => (

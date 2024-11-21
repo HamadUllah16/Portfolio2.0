@@ -15,20 +15,31 @@ function Header() {
             </div>
 
             {/* profile picture, personal info and stats comp */}
-            <div className='md:px-14 sm:px-5 flex relative py-4 md:flex-row max-md:flex-col items-center gap-8 '>
-                <div style={{ borderRadius: '70px', }} className=' w-60 h-60 z-10 relative bottom-0 overflow-hidden shadow-md max-sm:items-center '>
+            <div
+                className='
+            flex relative py-4
+            items-center gap-8
+            md:px-14
+            md:flex-row
+            min-md:items-center
+            min-md:justify-center
+            max-md:flex-col
+            sm:px-5
+            '
+            >
+                <div style={{ borderRadius: '70px', }} className=' w-60 h-60 z-10 lg:absolute lg:-top-10 md:relative md:top-0 sm:absolute sm:-top-10 max-sm:relative overflow-hidden shadow-md max-sm:items-center '>
                     <Image
                         src={pfp}
                         alt='a profile picture'
                         fill
                         style={{ objectFit: 'cover', padding: '8px', borderRadius: '70px', zIndex: 1000 }}
                     />
-                    <div
-                        className='w-full h-full inset-0 rounded-full blur-lg bg-gradient-to-r bg-white opacity-75'
-                    ></div>
                 </div>
+                <div
+                    className='w-60 h-40 inset-0 rounded-full lg:block md:hidden max-sm:hidden blur-lg bg-gradient-to-r bg-white opacity-75'
+                >123</div>
 
-                <div className='flex gap-8 lg:flex-row md:flex-col max-sm:flex-col items-start'>
+                <div className='flex flex-1 gap-8 lg:flex-row  md:flex-col max-sm:flex-col items-start'>
 
                     <div className='flex flex-col justify-center gap-3 w-full'>
                         <h3 className='text-2xl font-bold max-sm:text-center'>
@@ -57,11 +68,11 @@ function Header() {
                         </div>
                     </div>
 
-                    <div className='flex flex-grow flex-col  lg:items-end justify-center sm:items-start gap-3'>
+                    <div className='flex flex-grow flex-col lg:items-end justify-center sm:items-start gap-3'>
                         <h3 className='text-2xl font-bold max-sm:text-center'>
                             Accomplishments
                         </h3>
-                        <div className='flex flex-col w-fit gap-1'>
+                        <div className='flex flex-col w-fit gap-1 max-sm:items-center'>
                             <Link href={'https://trustvote-client.vercel.app/'}
                                 target='_blank'
                                 referrerPolicy='no-referrer'
