@@ -46,7 +46,9 @@ function Experience({ img, from, to, techstack }: { img: string, from: string, t
                 </div>
 
             </div>
-            <div className='w-5 h-5 absolute -left-3 max-sm:hidden z-50 rounded-full bg-red-400' />
+
+            {/* circular div */}
+            <div className='w-5 h-5 absolute -left-3 max-sm:hidden z-50 rounded-full bg-gradient-to-r from-violet-400 to-purple-300' />
         </div>
     )
 }

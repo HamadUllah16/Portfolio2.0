@@ -8,6 +8,8 @@ import WorkCard from './components/WorkCard';
 export default function Home() {
   const { allWork } = useSelector((state: RootState) => state.work)
   const [error, setError] = useState<string | null>(null);
+  const colors = ['bg-gradient-to-r from-fuchsia-500 to-cyan-500', 'bg-gradient-to-r from-red-500 to-orange-500', 'bg-gradient-to-r from-fuchsia-500 to-pink-500', 'bg-green-700', 'bg-indigo-600']
+
   const dispatch = useDispatch<AppDispatch>();
 
   // Fetching all work items from the API
@@ -42,10 +44,11 @@ export default function Home() {
     <div className='md:px-14 sm:px-5 max-sm:px-5 flex gap-5 flex-wrap h-full'>
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
-        allWork.map((work: any) => (
+        allWork.map((work: any, index) => (
           <WorkCard
             key={work.id}
             work={work}
+            bgColor={colors[index]}
           />
         ))
       ) : (
