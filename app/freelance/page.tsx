@@ -3,7 +3,7 @@ import React from 'react'
 
 function FreelancePage() {
     return (
-        <div className='px-14 flex gap-4'>
+        <div className='md:px-14 sm:px-5 max-sm:px-5 flex gap-4'>
             <FreelanceCard />
         </div>
     )

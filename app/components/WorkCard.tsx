@@ -6,7 +6,7 @@ import { Badge } from '../../components/ui/badge';
 import { LinkIcon } from 'lucide-react';
 import Image from 'next/image';
 
-function WorkCard({ work }: { work: { id: string, image: string, github: string, preview: string, title: string, description: string, technologies: string[], status: string } }) {
+function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, image: string, github: string, preview: string, title: string, description: string, technologies: string[], status: string } }) {
     const [show, setShow] = useState(false);
     return (
         <div
@@ -17,11 +17,11 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
         >
 
             {/* Texts */}
-            <div className="flex flex-wrap gap-4 p-2 w-full h-full">
+            <div className="flex flex-wrap gap-4 relative p-2 w-full h-full">
 
-                {/* Random Background Color */}
+                {/* Background Color */}
                 <div
-                    className={`max-sm:hidden flex h-52 w-52 rounded-md items-center justify-center relative overflow-hidden bg-red-400`} // Tailwind class
+                    className={`max-sm:hidden flex h-52 w-52 rounded-md items-center justify-center relative overflow-hidden ${'bg-slate-600' ?? 'bg-red-400'}`} // Tailwind class
                 >
                     {work.image &&
                         <Image
@@ -33,7 +33,7 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
                         />
                     }
                     <div
-                        className={`${show ? 'opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} bg-red-400 flex gap-2 items-center justify-center h-full w-full absolute transition-all duration-300 ease-in-out`}
+                        className={`${show ? 'opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} ${bgColor ?? 'bg-red-400'} flex gap-2 items-center justify-center h-full w-full absolute transition-all duration-300 ease-in-out`}
                     >
                         <Link href={work?.github} target='_blank'>
                             <Button variant={'outline'}>
@@ -64,6 +64,21 @@ function WorkCard({ work }: { work: { id: string, image: string, github: string,
                             </Badge>
                         ))}
                     </div>
+
+                </div>
+                <div
+                    className={`${show ? 'max-sm:flex opacity-100 z-50 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} ${bgColor ?? 'bg-red-400'} flex rounded-md gap-2 items-center justify-center h-full w-full absolute left-0 top-0 transition-all duration-300 ease-in-out sm:hidden`}
+                >
+                    <Link href={work?.github} target='_blank'>
+                        <Button variant={'outline'}>
+                            GitHub
+                        </Button>
+                    </Link>
+                    <Link href={work?.preview} target='_blank'>
+                        <Button>
+                            Preview
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -54,7 +54,7 @@ function FreelanceCard() {
                             className='w-full rounded-md'
                             variant={'default'}
                         >
-                            Hire
+                            Get in touch
                         </Button>
                     </Link>
                 </div>

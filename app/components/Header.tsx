@@ -11,23 +11,25 @@ function Header() {
     return (
         <div >
             {/* background cover */}
-            <div className='bg-red-400 h-52 max-sm:hidden'>
-            </div>
+            {/* <div className='bg-gradient-to-b from-red-400 via-rose-400 to-fuchsia-400 h-52'>
+            </div> */}
 
+            <div className='bg-slate-600 h-52'>
+            </div>
             {/* profile picture, personal info and stats comp */}
             <div
                 className='
             flex relative py-4
             items-center gap-8
             md:px-14
-            md:flex-row
-            min-md:items-center
+            md:flex
+            md:items-center
             min-md:justify-center
             max-md:flex-col
             sm:px-5
             '
             >
-                <div style={{ borderRadius: '70px', }} className=' w-60 h-60 z-10 lg:absolute lg:-top-10 md:relative md:top-0 sm:absolute sm:-top-10 max-sm:relative overflow-hidden shadow-md max-sm:items-center '>
+                <div style={{ borderRadius: '70px', }} className='w-60 h-60 z-10 lg:absolute lg:-top-10 md:relative md:top-2 md:flex sm:absolute sm:-top-10 max-sm:absolute max-sm:-top-10 overflow-hidden shadow-md max-sm:items-center '>
                     <Image
                         src={pfp}
                         alt='a profile picture'
@@ -36,8 +38,8 @@ function Header() {
                     />
                 </div>
                 <div
-                    className='w-60 h-40 inset-0 rounded-full lg:block md:hidden max-sm:hidden blur-lg bg-gradient-to-r bg-white opacity-75'
-                >123</div>
+                    className='w-60 h-40 inset-0 rounded-full lg:block md:hidden  blur-lg bg-gradient-to-r bg-white opacity-75'
+                ></div>
 
                 <div className='flex flex-1 gap-8 lg:flex-row  md:flex-col max-sm:flex-col items-start'>
 
