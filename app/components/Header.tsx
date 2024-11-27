@@ -1,3 +1,4 @@
+'use client'
 import { Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -5,17 +6,16 @@ import React from 'react'
 import { Button } from '../../components/ui/button'
 const pfp = '/pfp.jpg'
 
-
 function Header() {
-
     return (
         <div >
             {/* background cover */}
-            {/* <div className='bg-gradient-to-b from-red-400 via-rose-400 to-fuchsia-400 h-52'>
-            </div> */}
-
-            <div className='bg-slate-600 h-52'>
+            <div className="relative h-52 w-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-300 transition-opacity duration-300 ease-in-out"></div>
             </div>
+
+            {/* <div className='bg-slate-600 h-52 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-violet-400 to-purple-300'>
+            </div> */}
             {/* profile picture, personal info and stats comp */}
             <div
                 className='
@@ -107,7 +107,7 @@ function Header() {
 
             </div>
 
-        </div>
+        </div >
     )
 }
 

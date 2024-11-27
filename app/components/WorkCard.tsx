@@ -16,12 +16,11 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
             onMouseLeave={() => setShow(false)}
         >
 
-            {/* Texts */}
             <div className="flex flex-wrap gap-4 relative p-2 w-full h-full">
 
                 {/* Background Color */}
                 <div
-                    className={`max-sm:hidden flex h-52 w-52 rounded-md items-center justify-center relative overflow-hidden ${'bg-slate-600' ?? 'bg-red-400'}`} // Tailwind class
+                    className={`max-sm:hidden flex h-52 w-52 rounded-md items-center justify-center relative overflow-hidden bg-gradient-to-r from-violet-400 to-purple-300`}
                 >
                     {work.image &&
                         <Image
