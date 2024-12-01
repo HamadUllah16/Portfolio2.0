@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className='w-svw relative min-h-20'>
+        <div className='w-svw relative min-h-12'>
             <div
                 className='w-full absolute bottom-0 bg-input p-5 mt-auto px-14'
             >
@@ -11,10 +11,6 @@ function Footer() {
 
                 </p>
             </div>
-
-            {/* <div className='w-full h-32'>
-
-            </div> */}
         </div>
     )
 }
