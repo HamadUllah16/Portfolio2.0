@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../../components/ui/button'
+import { Badge } from '../../components/ui/badge'
 const pfp = '/pfp.jpg'
 
 function Header() {
@@ -12,6 +13,7 @@ function Header() {
             {/* background cover */}
             <div className="relative h-52 w-full">
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-300 transition-opacity duration-300 ease-in-out"></div>
+                <Badge className='absolute z-50 right-3 top-3' variant={'secondary'}>Version: 2.0</Badge>
             </div>
 
             {/* <div className='bg-slate-600 h-52 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-violet-400 to-purple-300'>
@@ -29,7 +31,16 @@ function Header() {
             sm:px-5
             '
             >
-                <div style={{ borderRadius: '70px', }} className='w-60 h-60 z-10 lg:absolute lg:-top-10 md:relative md:top-2 md:flex sm:absolute sm:-top-10 max-sm:absolute max-sm:-top-10 overflow-hidden shadow-md max-sm:items-center '>
+                <div style={{ borderRadius: '70px', }}
+                    className='w-60 h-60 z-10
+                lg:absolute lg:-top-10
+                md:relative md:top-2 md:flex
+                sm:absolute sm:-top-10 max-sm:absolute
+                max-sm:-top-40
+                overflow-hidden
+                shadow-md
+                max-sm:items-center'
+                >
                     <Image
                         src={pfp}
                         alt='a profile picture'
@@ -38,7 +49,7 @@ function Header() {
                     />
                 </div>
                 <div
-                    className='w-60 h-40 inset-0 rounded-full lg:block md:hidden  blur-lg bg-gradient-to-r bg-white opacity-75'
+                    className='w-60 h-48 max-sm:h-12 inset-0 rounded-full lg:block md:hidden  blur-lg bg-gradient-to-r bg-white opacity-75'
                 ></div>
 
                 <div className='flex flex-1 gap-8 lg:flex-row  md:flex-col max-sm:flex-col items-start'>
@@ -81,7 +92,7 @@ function Header() {
                             >
                                 <Button
                                     variant={'outline'}
-                                    className='sm:h-9 py-2 max-sm:h-8 rounded-md px-3 text-xs'
+                                    className='sm:h-9 py-2 max-sm:h-8 rounded-xl px-3 text-xs'
                                 >
                                     FYP: Decentralized Electronic Voting System
                                 </Button>
@@ -93,7 +104,7 @@ function Header() {
                             >
                                 <Button
                                     variant={'outline'}
-                                    className='sm:h-9 py-2 max-sm:h-8 rounded-md px-3 text-xs'
+                                    className='sm:h-9 py-2 max-sm:h-8 rounded-xl px-3 text-xs'
                                 >
                                     Meta Front-End Specialization
                                 </Button>

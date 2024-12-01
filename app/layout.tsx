@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 const poppins = Poppins({
   weight: ['300', '700'],
-  subsets: ['latin']
+  subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
@@ -34,12 +34,10 @@ export default function RootLayout({
           <CopyEmail />
           <InitialLoading />
           {/* <RightClickContextMenu> */}
-          <div className="flex flex-col gap-6 w-svw h-svh">
-            <Header />
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
+          <Header />
+          <Navbar />
+          {children}
+          <Footer />
           {/* </RightClickContextMenu> */}
 
         </ReduxProvider>

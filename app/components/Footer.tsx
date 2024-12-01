@@ -2,13 +2,19 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div
-            className='w-full bg-input p-5 bottom-0 mt-auto px-14'
-        >
-            <p className='text-center font-semibold text-red-400'>
-                Made with NextJS, ShadCN, & PostgreSQL
+        <div className='w-svw relative min-h-20'>
+            <div
+                className='w-full absolute bottom-0 bg-input p-5 mt-auto px-14'
+            >
+                <p className='text-center font-semibold text-red-400'>
+                    Made with NextJS, ShadCN, & PostgreSQL
 
-            </p>
+                </p>
+            </div>
+
+            {/* <div className='w-full h-32'>
+
+            </div> */}
         </div>
     )
 }
