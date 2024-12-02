@@ -1,10 +1,11 @@
 'use client'
-import { Github, Linkedin } from 'lucide-react'
+import { BookOpenCheck, Github, Linkedin } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../../components/ui/button'
 import { Badge } from '../../components/ui/badge'
+import FacebookMetaIcon from '@/custom-icons/FacebookMetaIcon'
 const pfp = '/pfp.jpg'
 
 function Header() {
@@ -85,16 +86,17 @@ function Header() {
                         <h3 className='text-2xl font-bold max-sm:text-center'>
                             Accomplishments
                         </h3>
-                        <div className='flex flex-col w-fit gap-1 max-sm:items-center'>
+                        <div className='grid grid-rows-2 w-fit max-sm:items-center'>
                             <Link href={'https://trustvote-client.vercel.app/'}
                                 target='_blank'
                                 referrerPolicy='no-referrer'
                             >
                                 <Button
-                                    variant={'outline'}
-                                    className='sm:h-9 py-2 max-sm:h-8 rounded-xl px-3 text-xs'
+                                    variant={'link'}
+                                    className='rounded-xl text-xs'
                                 >
-                                    FYP: Decentralized Electronic Voting System
+                                    <BookOpenCheck />
+                                    Decentralized Electronic Voting System
                                 </Button>
                             </Link>
                             <Link
@@ -103,9 +105,10 @@ function Header() {
                                 referrerPolicy='no-referrer'
                             >
                                 <Button
-                                    variant={'outline'}
-                                    className='sm:h-9 py-2 max-sm:h-8 rounded-xl px-3 text-xs'
+                                    variant={'link'}
+                                    className='rounded-xl text-xs'
                                 >
+                                    <FacebookMetaIcon />
                                     Meta Front-End Specialization
                                 </Button>
                             </Link>
