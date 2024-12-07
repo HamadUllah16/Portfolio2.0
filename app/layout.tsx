@@ -25,21 +25,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${poppins.className} antialiased h-full`}
       >
         <ReduxProvider>
           <Toaster position="top-center" />
           <CopyEmail />
           <InitialLoading />
           {/* <RightClickContextMenu> */}
-          <Header />
-          <Navbar />
-          {children}
-          <Footer />
-          {/* </RightClickContextMenu> */}
+          <div className="flex flex-col min-h-full">
 
+            <Header />
+            <Navbar />
+            {children}
+
+            <Footer />
+
+          </div>
+          {/* </RightClickContextMenu> */}
         </ReduxProvider>
       </body>
     </html>
