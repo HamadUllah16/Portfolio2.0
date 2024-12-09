@@ -1,14 +1,13 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { Button } from '../../components/ui/button'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 function MobileNav() {
-    const router = useRouter()
     const pathname = usePathname()
     const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
-    const navRefs = useRef<(HTMLButtonElement | null)[]>([])
+    const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
     const navItems = [
         { label: 'Work', path: '/' },
@@ -30,25 +29,26 @@ function MobileNav() {
     }, [pathname])
 
     return (
-        <div className='h-16 max-sm:block hidden'>
-            <div className='fixed bottom-0 h-16 bg-gradient-to-r from-violet-400 to-purple-300 w-full z-30'>
+        <div className='h-16 max-sm:block hidden relative z-40'>
+            <div className='fixed bottom-0 left-0 h-16 bg-gradient-to-r from-violet-400 to-purple-300 w-full'>
                 <div className='relative flex items-center justify-center h-full'>
                     {navItems.map((item, index) => (
-                        <Button
+                        <Link
                             key={item.path}
                             ref={(el) => {
                                 navRefs.current[index] = el
                             }}
-                            onClick={() => router.push(item.path)}
-                            size='sm'
-                            className={` z-20 rounded-none h-full w-full transition-all duration-300 ease-in-out relative`}
-                            variant={'ghost'}
+                            href={item.path}
+                            // onClick={() => router.push(item.path)}
+                            // size='sm'
+                            className={`flex items-center justify-center z-20 rounded-none h-full w-full transition-all duration-300 ease-in-out relative`}
+                            // variant={'ghost'}
                             style={{
                                 color: pathname.endsWith(item.path) ? 'white' : 'black'
                             }}
                         >
                             {item.label}
-                        </Button>
+                        </Link>
                     ))}
 
                     {/* active box*/}
