@@ -1,12 +1,10 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { Button } from '../../components/ui/button'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 function MobileNav() {
-    const router = useRouter()
     const pathname = usePathname()
     const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
     const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
