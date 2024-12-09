@@ -10,11 +10,15 @@ const pfp = '/pfp.jpg'
 
 function Header() {
     return (
-        <div >
+        <div>
             {/* background cover */}
             <div className="relative h-52 w-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-300 transition-opacity duration-300 ease-in-out"></div>
-                <Badge className='absolute z-50 right-3 top-3' variant={'secondary'}>Version: 2.0</Badge>
+                <div className="flex items-center justify-center absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-300 transition-opacity duration-300 ease-in-out">
+                    <h5 className='text-lg'>
+                        i edit buttons.
+                    </h5>
+                </div>
+                {/* <Badge className='absolute z-50 right-3 top-3' variant={'secondary'}>Version: 2.0</Badge> */}
             </div>
 
             {/* <div className='bg-slate-600 h-52 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-violet-400 to-purple-300'>
@@ -33,7 +37,8 @@ function Header() {
             '
             >
                 <div style={{ borderRadius: '70px', }}
-                    className='w-60 h-60 z-10
+                    className='
+                    w-60 h-60 z-10
                 lg:absolute lg:-top-10
                 md:relative md:top-2 md:flex
                 sm:absolute sm:-top-10 max-sm:absolute
@@ -60,7 +65,7 @@ function Header() {
                             Hamad Ullah
                         </h3>
                         <h6 className='max-w-80 text-sm'>
-                            Software Engineer specialized in Front-End Development and Decentralized Applications.
+                            Software Engineer specialized in Front-End Development.
                         </h6>
                         <div className='flex gap-2 max-sm:justify-center'>
                             <a href={'https://drive.google.com/drive/folders/1qfen1IlVD3V-dI6xLf25zWJ8G16kPIeh?usp=sharing'} target='_blank'>

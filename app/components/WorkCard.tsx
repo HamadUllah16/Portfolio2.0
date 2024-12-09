@@ -4,12 +4,17 @@ import React, { useState } from 'react'
 import { Button } from '../../components/ui/button';
 import { Badge } from '../../components/ui/badge';
 import { LinkIcon } from 'lucide-react';
+import { motion } from 'motion/react'
 import Image from 'next/image';
 
 function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, image: string, github: string, preview: string, title: string, description: string, technologies: string[], status: string } }) {
     const [show, setShow] = useState(false);
     return (
-        <div
+        <motion.div
+            variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1 }
+            }}
             key={work.id}
             className="mb-4 border bg-secondary rounded-lg h-fit"
             onMouseEnter={() => setShow(true)}
@@ -80,7 +85,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                     </Link>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

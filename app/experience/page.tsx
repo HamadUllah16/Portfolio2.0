@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import Experience from '../components/Experience'
 const upwork = '/upwork.png'
 const dextro = '/dextro.png'
+import { motion } from 'motion/react'
 
 function ExperiencePage() {
 
@@ -10,7 +12,21 @@ function ExperiencePage() {
             <div className='flex relative'>
                 <div className='bg-gradient-to-r from-violet-400 to-purple-300 z-0  w-1 sm:left-2 absolute  max-sm:absolute h-full left-10 ' />
 
-                <div className='flex flex-col gap-14 '>
+                <motion.div
+                    className='flex flex-col gap-14 '
+                    variants={{
+                        hidden: { opacity: 0, y: 10 },
+                        show: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                staggerChildren: 0.25
+                            }
+                        }
+                    }}
+                    initial='hidden'
+                    animate='show'
+                >
 
 
                     <Experience
@@ -27,7 +43,7 @@ function ExperiencePage() {
                         techstack={['HTML', 'CSS', 'SQL', 'WordPress']}
                     />
 
-                </div>
+                </motion.div>
             </div>
         </div>
     )

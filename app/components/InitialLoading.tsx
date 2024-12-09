@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Progress } from '../../components/ui/progress';
 import Image from 'next/image';
+import MyInfoCard from './MyInfoCard';
 const hLogo = '/Hlogo.png'
 
 export default function InitialLoading() {
@@ -30,16 +31,9 @@ export default function InitialLoading() {
         <div className={`${progress === 100 ? 'opacity-0 -z-50' : 'opacity-100 z-50'} bg-white flex-col gap-5 transition-all duration-300 ease-in-out fixed inset-0 flex items-center justify-center "`}>
             <div className={`flex flex-col gap-2 w-full justify-center items-center`}>
                 <div className="flex flex-col w-4/5 max-w-lg gap-5">
-                    <div className='flex justify-center items-center pb-4'>
 
-                        <Image
-                            src={hLogo}
-                            alt='an H logo'
-                            width={80}
-                            height={80}
-                            className='-rotate-3 hover:scale-110 transition-all duration-300 ease-in-out hover:rotate-3'
-                        />
-                    </div>
+                    <MyInfoCard />
+
                     <div>
 
                         <Progress
@@ -49,9 +43,10 @@ export default function InitialLoading() {
                             className="h-2 transition-all gradient-to-r from-violet-400 to-purple-300 duration-300 ease-in-out" />
                         {/* <p className="text-center mt-4 font-bold text-red-400">Loading... {Math.floor(progress)}%</p> */}
                     </div>
+
                     <div className='flex pt-4'>
                         <p className='font-thin'>
-                            <strong className='font-bold'>Tip:</strong> Press <span className='px-2 py-1 bg-slate-500 rounded-lg text-white'>Ctrl</span> + <span className='px-2 py-1 bg-slate-500 rounded-lg text-white'>C</span> to copy the email.
+                            <strong className='font-bold'>Tip:</strong> Press <span className='px-2 py-1 bg-slate-500 rounded-lg text-white'>Ctrl</span> + <span className='px-2 py-1 bg-slate-500 rounded-lg text-white'>C</span> to copy my email.
                         </p>
 
                     </div>
