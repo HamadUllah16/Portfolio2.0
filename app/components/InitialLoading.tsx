@@ -1,9 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Progress } from '../../components/ui/progress';
-import Image from 'next/image';
 import MyInfoCard from './MyInfoCard';
-const hLogo = '/Hlogo.png'
 
 export default function InitialLoading() {
     const [progress, setProgress] = useState(0);

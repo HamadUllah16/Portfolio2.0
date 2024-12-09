@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../../components/ui/button'
-import { Badge } from '../../components/ui/badge'
 import FacebookMetaIcon from '@/custom-icons/FacebookMetaIcon'
 const pfp = '/pfp.jpg'
 
