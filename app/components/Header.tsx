@@ -58,13 +58,13 @@ function Header() {
                     className='w-60 h-48 max-sm:h-12 inset-0 rounded-full lg:block md:hidden  blur-lg bg-gradient-to-r bg-white opacity-75'
                 ></div>
 
-                <div className='flex flex-1 gap-8 lg:flex-row  md:flex-col max-sm:flex-col items-start'>
+                <div className='flex flex-1 gap-8 lg:flex-row  md:flex-col max-sm:flex-col max-sm:w-full items-start'>
 
-                    <div className='flex flex-col justify-center gap-3 w-full'>
+                    <div className='flex flex-col justify-center max-sm:items-center gap-3 w-full'>
                         <h3 className='text-2xl font-bold max-sm:text-center'>
                             Hamad Ullah
                         </h3>
-                        <h6 className='max-w-80 text-sm'>
+                        <h6 className='md:max-w-80 max-sm:w-full max-sm:text-center text-sm'>
                             Software Engineer specialized in Front-End Development.
                         </h6>
                         <div className='flex gap-2 max-sm:justify-center'>
@@ -87,7 +87,7 @@ function Header() {
                         </div>
                     </div>
 
-                    <div className='flex flex-grow flex-col lg:items-end justify-center sm:items-start gap-3'>
+                    <div className='flex flex-grow flex-col lg:items-end justify-center max-sm:items-center max-sm:w-full sm:items-start gap-3'>
                         <h3 className='text-2xl font-bold max-sm:text-center'>
                             Accomplishments
                         </h3>
