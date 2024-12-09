@@ -16,7 +16,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 show: { opacity: 1 }
             }}
             key={work.id}
-            className="mb-4 border bg-secondary rounded-lg h-fit"
+            className="border bg-secondary rounded-lg h-fit max-sm:w-full"
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
         >
@@ -25,7 +25,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
 
                 {/* Background Color */}
                 <div
-                    className={`max-sm:hidden flex h-52 w-52 rounded-md items-center justify-center relative overflow-hidden bg-gradient-to-r from-violet-400 to-purple-300`}
+                    className={`flex h-52 w-52 max-sm:w-full max-sm:h-32 rounded-md items-center justify-center relative overflow-hidden bg-gradient-to-r from-violet-400 to-purple-300`}
                 >
                     {work.image &&
                         <Image
@@ -53,8 +53,8 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 </div>
 
                 {/* Text and Badge Section */}
-                <div className='flex flex-col gap-2 h-52 w-52 justify-center relative'>
-                    <LinkIcon className='absolute right-0 top-0' size={'12px'} />
+                <div className='flex flex-col gap-2 h-52 w-52 max-sm:w-full max-sm:h-full justify-center relative'>
+                    <LinkIcon className='absolute right-0 top-0 max-sm:hidden' size={'12px'} />
 
                     <div className='flex gap-1 justify-between items-center'>
                         <h3 className="font-bold text-lg">{work.title}</h3>

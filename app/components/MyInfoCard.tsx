@@ -16,9 +16,10 @@ function MyInfoCard() {
         rounded-2xl
         items-center
         bg-input
+        max-sm:flex-col
             '>
             <motion.div
-                className='w-40 h-40 min-w-16 min-h-16 min-sm:hidden relative'
+                className='w-40 h-40 min-w-16 min-h-16 relative'
                 initial={{ opacity: 0, rotate: 45, scale: 0 }}
                 animate={{ opacity: 1, rotate: 0, scale: 1 }}
                 transition={{ duration: 0.3, bounceDamping: 10, bounceStiffness: 600 }}
@@ -43,7 +44,7 @@ function MyInfoCard() {
                         Hamad Ullah
                     </h3>
                     <h6 className='max-w-80 text-sm'>
-                        Software Engineer specialized in Front-End Development and Decentralized Applications.
+                        Software Engineer specialized in Front-End Development.
                     </h6>
                     <div className='flex gap-2 max-sm:justify-center'>
                         <a href={'https://drive.google.com/drive/folders/1qfen1IlVD3V-dI6xLf25zWJ8G16kPIeh?usp=sharing'} target='_blank'>
