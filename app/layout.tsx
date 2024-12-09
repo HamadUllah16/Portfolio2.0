@@ -8,6 +8,7 @@ import { Toaster } from "../components/ui/sonner";
 import CopyEmail from "./components/CopyEmail";
 import InitialLoading from "./components/InitialLoading";
 import Footer from "./components/Footer";
+import MobileNav from "./components/MobileNav";
 
 const poppins = Poppins({
   weight: ['300', '700'],
@@ -39,8 +40,8 @@ export default function RootLayout({
             <Header />
             <Navbar />
             {children}
-
             <Footer />
+            <MobileNav />
 
           </div>
           {/* </RightClickContextMenu> */}

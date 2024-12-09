@@ -5,6 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Button } from '../../components/ui/button'
 import FacebookMetaIcon from '@/custom-icons/FacebookMetaIcon'
+import { Separator } from '../../components/ui/separator'
 const pfp = '/pfp.jpg'
 
 function Header() {
@@ -124,6 +125,8 @@ function Header() {
                 </div>
 
             </div>
+
+            <Separator className='hidden max-sm:block' />
 
         </div >
     )
