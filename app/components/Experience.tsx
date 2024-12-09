@@ -1,10 +1,17 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { Badge } from '../../components/ui/badge'
+import { motion } from 'motion/react'
 
 function Experience({ img, from, to, techstack }: { img: string, from: string, to: string, techstack: string[] }) {
     return (
-        <div className='flex px-10 max-sm:px-0 relative '>
+        <motion.div variants={{
+            hidden: { opacity: 0 },
+            show: { opacity: 1 }
+        }}
+            className='flex px-10 max-sm:px-0 relative '
+        >
             <div className='rounded-lg flex flex-col items-center z-20 gap-2 bg-secondary justify-between border border-input p-3'>
                 <div className='flex gap-10'>
                     <div className='w-28 h-14 relative flex justify-start rounded-lg'>
@@ -48,8 +55,8 @@ function Experience({ img, from, to, techstack }: { img: string, from: string, t
             </div>
 
             {/* circular div */}
-            <div className='w-5 h-5 absolute -left-0 max-sm:hidden z-50 rounded-full bg-gradient-to-r from-violet-400 to-purple-300' />
-        </div>
+            <div className=' w-5 h-5 absolute -left-0 max-sm:hidden z-10 rounded-full bg-gradient-to-r from-violet-400 to-purple-300' />
+        </motion.div>
     )
 }
 

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
+import { motion } from "motion/react"
 import WorkCard from './components/WorkCard';
 
 export default function Home() {
@@ -41,7 +42,20 @@ export default function Home() {
   }, [allWork.length]);
 
   return (
-    <div className='py-5 md:px-14 sm:px-5 max-sm:px-5 flex gap-5 flex-wrap h-full'>
+    <motion.div
+      className='py-5 md:px-14 sm:px-5 max-sm:px-5 flex gap-5 flex-wrap h-full'
+      variants={{
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.25,
+          }
+        }
+      }}
+      initial="hidden"
+      animate='show'
+    >
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
         allWork.map((work: any, index) => (
@@ -54,6 +68,6 @@ export default function Home() {
       ) : (
         <p>No work items found</p>
       )}
-    </div>
+    </motion.div>
   );
 }
