@@ -9,6 +9,7 @@ import CopyEmail from "./components/CopyEmail";
 import InitialLoading from "./components/InitialLoading";
 import Footer from "./components/Footer";
 import MobileNav from "./components/MobileNav";
+import MyDetails from "./components/MyDetails";
 
 const poppins = Poppins({
   weight: ['300', '700'],
@@ -37,9 +38,19 @@ export default function RootLayout({
           {/* <RightClickContextMenu> */}
           <div className="flex flex-col min-h-full">
 
-            <Header />
-            <Navbar />
-            {children}
+            <Header>
+              <div className="grid grid-cols-3 gap-2 justify-between min-w-full">
+                <div className="col-span-1">
+                  <MyDetails />
+                </div>
+
+                <div className="col-span-2">
+                  <Navbar />
+                  {children}
+                </div>
+
+              </div>
+            </Header>
             <Footer />
             <MobileNav />
 
