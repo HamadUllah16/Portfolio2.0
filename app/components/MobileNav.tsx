@@ -28,9 +28,9 @@ function MobileNav() {
     }, [pathname])
 
     return (
-        <div className='h-16 max-sm:block hidden relative z-40'>
+        <div className='h-20 max-sm:flex hidden relative z-40'>
             <div className='fixed bottom-0 left-0 h-16 bg-gradient-to-r from-violet-400 to-purple-300 w-full'>
-                <div className='relative flex items-center justify-center h-full'>
+                <div className='relative flex items-center justify-center h-full p-2 overflow-hidden'>
                     {navItems.map((item, index) => (
                         <Link
                             key={item.path}
@@ -49,7 +49,7 @@ function MobileNav() {
 
                     {/* active box*/}
                     <div
-                        className='absolute z-0 bottom-0 h-full bg-black transition-all duration-300 ease-in-out'
+                        className='absolute z-0 bottom-1.5 h-4/5 bg-primary transition-all rounded-md duration-300 ease-in-out'
                         style={{ left: underlineStyle.left, width: underlineStyle.width }}
                     />
                 </div>

@@ -73,8 +73,7 @@ function NavItems({ navItems }: { navItems: { link: string, title: string, count
                         </p>
                         {nav.count &&
                             <p className='px-1 text-xs'>
-                                {nav.title === 'Work' ? loading ? <Skeleton className="w-[15px] h-[10px] rounded-full" /> : nav.count : nav.count}
-
+                                {nav.count}
                             </p>
                         }
 

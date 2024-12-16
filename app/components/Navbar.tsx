@@ -9,8 +9,8 @@ function Navbar() {
 
 
     return (
-        <div className='block md:px-14 sm:px-5 max-sm:hidden'>
-            <div className='flex flex-col gap-1 overflow-clip'>
+        <div className='block max-sm:hidden'>
+            <div className='flex flex-col gap-3 overflow-clip'>
                 <NavItems
                     navItems={[
                         { link: '/', title: 'Work', count: allWork.length },
