@@ -7,9 +7,10 @@ import { RootState } from '../redux/store'
 function Navbar() {
     const { allWork } = useSelector((state: RootState) => state.work);
 
+
     return (
         <div className='block md:px-14 sm:px-5 max-sm:hidden'>
-            <div className='relative overflow-clip'>
+            <div className='flex flex-col gap-1 overflow-clip'>
                 <NavItems
                     navItems={[
                         { link: '/', title: 'Work', count: allWork.length },
@@ -18,7 +19,8 @@ function Navbar() {
                         { link: '/freelance', title: 'Freelance', count: null }
                     ]}
                 />
-                <div className='border-b-2 border-b-slate-200 z-10 w-full absolute bottom-0'></div>
+
+                <div className='border-b-2 border-b-slate-200 z-10 w-full'></div>
             </div>
         </div>
     )

@@ -16,7 +16,6 @@ function MobileNav() {
         { label: 'Freelance', path: '/freelance' },
     ]
 
-    // Update underline position based on active nav item
     useEffect(() => {
         const activeIndex = navItems.findIndex((item) => item.path === pathname)
         if (navRefs.current[activeIndex]) {
@@ -39,10 +38,7 @@ function MobileNav() {
                                 navRefs.current[index] = el
                             }}
                             href={item.path}
-                            // onClick={() => router.push(item.path)}
-                            // size='sm'
                             className={`flex items-center justify-center z-20 rounded-none h-full w-full transition-all duration-300 ease-in-out relative`}
-                            // variant={'ghost'}
                             style={{
                                 color: pathname.endsWith(item.path) ? 'white' : 'black'
                             }}
@@ -58,7 +54,7 @@ function MobileNav() {
                     />
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

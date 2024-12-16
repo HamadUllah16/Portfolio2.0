@@ -27,19 +27,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <body
-        className={`${poppins.className} antialiased h-full`}
+        className={`${poppins.className} antialiased max-h-svh`}
       >
         <ReduxProvider>
           <Toaster position="top-center" />
           <CopyEmail />
           <InitialLoading />
           {/* <RightClickContextMenu> */}
-          <div className="flex flex-col min-h-full">
+          <div className="flex flex-col max-h-svh">
 
             <Header>
-              <div className="grid grid-cols-3 gap-2 justify-between min-w-full">
+              <div className="grid grid-cols-3 gap-2 justify-between">
                 <div className="col-span-1">
                   <MyDetails />
                 </div>
@@ -51,7 +51,7 @@ export default function RootLayout({
 
               </div>
             </Header>
-            <Footer />
+            {/* <Footer /> */}
             <MobileNav />
 
           </div>

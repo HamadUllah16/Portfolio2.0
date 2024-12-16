@@ -4,6 +4,7 @@ import Experience from '../components/Experience'
 const upwork = '/upwork.png'
 const dextro = '/dextro.png'
 import { motion } from 'motion/react'
+import { Separator } from '../../components/ui/separator'
 
 function ExperiencePage() {
 
@@ -11,6 +12,7 @@ function ExperiencePage() {
         <div className='py-5 md:px-14 sm:px-5 max-sm:px-5'>
             <div className='flex relative'>
                 <div className='bg-gradient-to-r from-violet-400 to-purple-300 z-0  w-1 sm:left-2 absolute  max-sm:absolute h-full left-10 ' />
+
 
                 <motion.div
                     className='flex flex-col gap-14 '
