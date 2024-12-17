@@ -10,7 +10,7 @@ const pfp = '/pfp.jpg'
 
 function MyDetails() {
     return (
-        <div className="flex flex-col gap-3
+        <div className="flex flex-col gap-5
         lg:w-fit lg:flex-col xl:w-fit lg:p-0
         max-sm:items-center max-sm:p-2 max-sm:h-full max-sm:flex-row max-sm:gap-2
         sm:items-center sm:justify-start sm:p-5 sm:flex-row
@@ -46,7 +46,7 @@ function MyDetails() {
                 <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap'>
                     Software Engineer specialized in Front-End Development.
                 </h6>
-                <div className='md:block sm:block max-sm:block'>
+                <div className='lg:hidden xl:hidden md:block sm:block max-sm:block'>
                     <SocialButtons />
                 </div>
             </div>
