@@ -1,5 +1,4 @@
 import React from 'react'
-import { Separator } from '../../components/ui/separator'
 
 
 function Header() {
@@ -7,7 +6,7 @@ function Header() {
         <div>
             {/* background cover */}
             <div className="flex items-center justify-center relative h-52 inset-0 bg-gradient-to-r from-violet-400 to-purple-300 transition-opacity duration-300 ease-in-out">
-                <h5 className='text-lg'>
+                <h5 className='text-lg lg:block sm:hidden max-sm:hidden md:hidden'>
                     i edit buttons.
                 </h5>
             </div>
@@ -26,8 +25,6 @@ function Header() {
             >
                 {children}
             </div> */}
-
-            <Separator className='hidden max-sm:block' />
 
         </div >
     )

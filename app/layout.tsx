@@ -29,32 +29,37 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased max-h-dvh h-dvh lg:overflow-hidden inset-0 bg-gradient-to-r from-violet-400 to-purple-300 `}
+        className={`${poppins.className} antialiased max-h-dvh h-dvh relative lg:overflow-hidden inset-0 bg-gradient-to-r from-violet-400 to-purple-300 `}
       >
 
         <Header />
         <div className="
-          py-5 grid grid-cols-3 gap-5 justify-between
+          flex py-5 gap-5 justify-between
           bg-white border rounded-t-3xl
-          lg:mx-40 lg:h-[80%]
-          md:px-5 md:h-[80%]
-          sm:px-2 sm:h-full
+          lg:mx-24 lg:h-[80%]
+          xl:mx-40
+          md:px-5 md:h-[80%] md:mx-20
+          sm:px-2 sm:h-full sm:md:5
           max-sm:-bottom-5 max-sm:w-full
-
           lg:overflow-hidden
 
           ">
-          <div className="col-span-1 flex flex-col gap-3 justify-between pb-5
-            max-sm:items-center sm:col-span-3 sm:items-center max-sm:col-span-3
-            lg:col-span-1
-            md:col-span-1
+          <div className="
+           flex flex-col gap-3 justify-between pb-5
+           sm:w-full sm:items-center sm:absolute sm:top-0 sm:left-0
+           max-sm:items-center max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:pb-0
+            xl:w-fit
+            lg:col-span-1 lg:relative lg:w-fit
+            md:absolute md:top-0 md:left-0
             ">
             <MyDetails />
-            <SocialButtons />
+            <div className="sm:hidden max-sm:hidden lg:block md:hidden">
+              <SocialButtons />
+            </div>
           </div>
 
           <ReduxProvider>
-            <div className="col-span-2 max-sm:col-span-3 max-sm:px-2 h-full lg:overflow-hidden">
+            <div className="max-sm:w-full max-sm:px-2 h-full lg:overflow-hidden xl:w-full lg:w-full">
               <Toaster position="top-center" />
               <CopyEmail />
               <InitialLoading />

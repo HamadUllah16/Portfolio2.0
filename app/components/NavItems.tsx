@@ -5,11 +5,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store';
 import { setAllWork, setLoading } from '../redux/features/work';
-import { Skeleton } from '../../components/ui/skeleton';
 
 function NavItems({ navItems }: { navItems: { link: string, title: string, count: number | null }[] }) {
     const pathname = usePathname();
-    const { allWork, loading } = useSelector((state: RootState) => state.work)
+    const { allWork } = useSelector((state: RootState) => state.work)
     const dispatch = useDispatch<AppDispatch>();
     const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
     const navRefs = useRef<(HTMLAnchorElement | null)[]>([])

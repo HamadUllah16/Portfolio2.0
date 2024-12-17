@@ -4,7 +4,6 @@ import Experience from '../components/Experience'
 const upwork = '/upwork.png'
 const dextro = '/dextro.png'
 import { motion } from 'motion/react'
-import { Separator } from '../../components/ui/separator'
 
 function ExperiencePage() {
 
