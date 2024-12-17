@@ -1,18 +1,18 @@
 'use client'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store';
 import { setAllWork, setLoading } from '../redux/features/work';
-import { Skeleton } from '../../components/ui/skeleton';
-import { Button } from '../../components/ui/button';
-
 
 function NavItems({ navItems }: { navItems: { link: string, title: string, count: number | null }[] }) {
     const pathname = usePathname();
-    const { allWork, loading } = useSelector((state: RootState) => state.work)
+    const { allWork } = useSelector((state: RootState) => state.work)
     const dispatch = useDispatch<AppDispatch>();
+    const [underlineStyle, setUnderlineStyle] = useState({ left: 0, width: 0 })
+    const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
+
 
     const getAllWork = async () => {
         try {
@@ -32,6 +32,17 @@ function NavItems({ navItems }: { navItems: { link: string, title: string, count
     };
 
     useEffect(() => {
+        const activeIndex = navItems.findIndex((item: any) => item.link === pathname)
+        if (navRefs.current[activeIndex]) {
+            const activeButton = navRefs.current[activeIndex]
+            setUnderlineStyle({
+                left: activeButton.offsetLeft,
+                width: activeButton.offsetWidth,
+            })
+        }
+    }, [pathname])
+
+    useEffect(() => {
         if (allWork.length === 0) {
             getAllWork()
                 .then((data) => {
@@ -41,30 +52,37 @@ function NavItems({ navItems }: { navItems: { link: string, title: string, count
         }
     }, [allWork.length]);
 
-    console.log('Current Pathname:', pathname); // Debugging to check the current path
-
     return (
-        <div className='flex gap-0 relative z-20 flex-wrap'>
-            {navItems.map((nav) => {
-                const isActive = pathname === nav.link || pathname.startsWith(`${nav.link}/`);
-
+        <div className='flex gap-0 relative flex-wrap'>
+            {navItems.map((nav, index) => {
                 return (
                     <Link
                         key={nav.link}
                         href={nav.link}
+                        ref={(el) => {
+                            navRefs.current[index] = el
+                        }}
+                        style={{
+                            color: pathname.endsWith(nav.link) ? 'white' : 'black'
+                        }}
+                        className='z-10 p-2 transition-all duration-300 ease-in-out flex'
                     >
-                        <Button
-                            variant={isActive ? 'active' : 'inactive'}
-                        >
+                        <p className='text-center'>
                             {nav.title}
-                            <sup>
-                                {nav.title === 'Work' ? loading ? <Skeleton className="w-[15px] h-[10px] rounded-full" /> : nav.count : nav.count}
+                        </p>
+                        {nav.count &&
+                            <p className='px-1 text-xs'>
+                                {nav.count}
+                            </p>
+                        }
 
-                            </sup>
-                        </Button>
                     </Link>
                 );
             })}
+            <div
+                className='absolute z-0 bottom-0 rounded-md h-full bg-primary transition-all duration-300 ease-in-out'
+                style={{ left: underlineStyle.left, width: underlineStyle.width }}
+            ></div>
         </div>
     );
 }

@@ -16,16 +16,16 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 show: { opacity: 1 }
             }}
             key={work.id}
-            className="border bg-secondary rounded-lg h-fit max-sm:w-full"
+            className="border bg-secondary rounded-lg h-fit w-full"
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
         >
 
-            <div className="flex flex-wrap gap-4 relative p-2 w-full h-full">
+            <div className="flex gap-4 relative p-2 w-full h-full max-sm:flex-col">
 
                 {/* Background Color */}
                 <div
-                    className={`flex h-52 w-52 max-sm:w-full max-sm:h-32 rounded-md items-center justify-center relative overflow-hidden bg-gradient-to-r from-violet-400 to-purple-300`}
+                    className={`flex h-40 w-72 max-sm:w-full rounded-md items-center justify-center relative overflow-hidden bg-gradient-to-r from-violet-400 to-purple-300`}
                 >
                     {work.image &&
                         <Image
@@ -53,7 +53,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 </div>
 
                 {/* Text and Badge Section */}
-                <div className='flex flex-col gap-2 h-52 w-52 max-sm:w-full max-sm:h-full justify-center relative'>
+                <div className='flex flex-col gap-2 w-full justify-center relative'>
                     <LinkIcon className='absolute right-0 top-0 max-sm:hidden' size={'12px'} />
 
                     <div className='flex gap-1 justify-between items-center'>
@@ -71,7 +71,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
 
                 </div>
                 <div
-                    className={`${show ? 'max-sm:flex opacity-100 z-20 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} ${bgColor ?? 'bg-red-400'} flex rounded-md gap-2 items-center justify-center h-full w-full absolute left-0 top-0 transition-all duration-300 ease-in-out sm:hidden`}
+                    className={`${show ? 'max-sm:flex opacity-100 z-30 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} ${bgColor ?? 'bg-red-400'} flex rounded-md gap-2 items-center justify-center h-full w-full absolute left-0 top-0 transition-all duration-300 ease-in-out sm:hidden`}
                 >
                     <Link href={work?.github} target='_blank'>
                         <Button variant={'outline'}>

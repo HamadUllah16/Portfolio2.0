@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <motion.div
-      className='py-5 md:px-14 sm:px-5 max-sm:px-5 flex gap-5 flex-wrap h-full'
+      className="flex flex-col py-5 space-y-3 overflow-y-scroll h-full"
       variants={{
         hidden: { opacity: 0 },
         show: {
@@ -68,6 +68,6 @@ export default function Home() {
       ) : (
         <p>No work items found</p>
       )}
-    </motion.div>
+    </ motion.div>
   );
 }
