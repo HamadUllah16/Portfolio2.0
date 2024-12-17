@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased max-h-dvh h-dvh relative lg:overflow-hidden inset-0 bg-gradient-to-r from-violet-400 to-purple-300 `}
+        className={`${poppins.className} antialiased max-h-svh h-dvh relative lg:overflow-hidden bg-slate-800`}
       >
 
         <Header />
@@ -39,8 +39,8 @@ export default function RootLayout({
           lg:mx-24 lg:h-[80%]
           xl:mx-40
           md:px-5 md:h-[80%] md:mx-20
-          sm:px-2 sm:h-full sm:md:5
-          max-sm:-bottom-5 max-sm:w-full
+          sm:px-2 sm:h-[80%] sm:md:5
+          max-sm:-bottom-5 max-sm:h-[80%] max-sm:w-full max-sm:py-0
           lg:overflow-hidden
 
           ">
@@ -59,7 +59,7 @@ export default function RootLayout({
           </div>
 
           <ReduxProvider>
-            <div className="max-sm:w-full max-sm:px-2 h-full lg:overflow-hidden xl:w-full lg:w-full">
+            <div className="max-sm:w-full max-sm:px-2 h-full lg:overflow-hidden xl:w-full lg:w-full sm:w-full sm:h-full">
               <Toaster position="top-center" />
               <CopyEmail />
               <InitialLoading />
@@ -67,7 +67,7 @@ export default function RootLayout({
               {children}
 
               {/* below is a dummy div to take space of mobile nav since fixed/absolute arent counted in flow */}
-              <div className="w-full h-14 lg:hidden max-sm:block" />
+              <div className="w-full h-14 lg:hidden max-sm:block md:hidden sm:hidden" />
             </div>
           </ReduxProvider>
 

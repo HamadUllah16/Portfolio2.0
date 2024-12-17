@@ -9,19 +9,17 @@ function Navbar() {
 
 
     return (
-        <div className='block max-sm:hidden'>
-            <div className='flex flex-col gap-3 overflow-clip'>
-                <NavItems
-                    navItems={[
-                        { link: '/', title: 'Work', count: allWork.length },
-                        { link: '/experience', title: 'Experience', count: null },
-                        { link: '/about', title: 'About', count: null },
-                        { link: '/freelance', title: 'Freelance', count: null }
-                    ]}
-                />
+        <div className='flex flex-col gap-3 overflow-clip max-sm:hidden'>
+            <NavItems
+                navItems={[
+                    { link: '/', title: 'Work', count: allWork.length },
+                    { link: '/experience', title: 'Experience', count: null },
+                    { link: '/about', title: 'About', count: null },
+                    { link: '/freelance', title: 'Freelance', count: null }
+                ]}
+            />
 
-                <div className='border-b-2 border-b-slate-200 z-10 w-full'></div>
-            </div>
+            <div className='border-b-2 border-b-slate-200 z-10 w-full'></div>
         </div>
     )
 }

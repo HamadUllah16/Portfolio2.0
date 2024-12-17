@@ -28,8 +28,8 @@ function MobileNav() {
     }, [pathname])
 
     return (
-        <div className='h-20 max-sm:flex hidden relative z-40'>
-            <div className='fixed bottom-0 left-0 h-16 bg-gradient-to-r from-violet-400 to-purple-300 w-full'>
+        <div className='h-fit max-sm:flex hidden relative z-40 '>
+            <div className='fixed bottom-0 left-0 h-16 bg-white border border-t w-full'>
                 <div className='relative flex items-center justify-center h-full p-2 overflow-hidden'>
                     {navItems.map((item, index) => (
                         <Link

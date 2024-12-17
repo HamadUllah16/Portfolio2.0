@@ -40,10 +40,10 @@ function MyDetails() {
             sm:w-fit sm:col-span-2 sm:items-start
             max-sm:w-full max-sm:items-start
             '>
-                <h3 className='text-2xl  font-bold max-sm:text-center sm:text-center'>
+                <h3 className='text-2xl lg:text-primary sm:text-white max-sm:text-white font-bold max-sm:text-center sm:text-center'>
                     Hamad Ullah
                 </h3>
-                <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap'>
+                <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap lg:text-primary sm:text-white max-sm:text-white'>
                     Software Engineer specialized in Front-End Development.
                 </h6>
                 <div className='lg:hidden xl:hidden md:block sm:block max-sm:block'>
