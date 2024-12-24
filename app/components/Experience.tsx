@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import React from 'react'
 import { Badge } from '../../components/ui/badge'
-import { motion } from 'motion/react'
 
 function Experience({ img, from, to, techstack }: { img: string, from: string, to: string, techstack: string[] }) {
     return (
