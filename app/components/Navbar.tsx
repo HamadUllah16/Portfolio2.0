@@ -9,7 +9,7 @@ function Navbar() {
 
 
     return (
-        <div className='flex flex-col gap-3 overflow-clip max-sm:hidden'>
+        <div className='flex flex-col gap-3 overflow-clip md:flex sm:hidden max-sm:hidden justify-center border w-fit p-2 rounded-lg'>
             <NavItems
                 navItems={[
                     { link: '/', title: 'Work', count: allWork.length },
@@ -19,7 +19,7 @@ function Navbar() {
                 ]}
             />
 
-            <div className='border-b-2 border-b-slate-200 z-10 w-full'></div>
+            {/* <div className='border-b-2 border-b-slate-200 z-10 w-full'></div> */}
         </div>
     )
 }

@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <motion.div
-      className="flex flex-col py-5 space-y-3 overflow-y-scroll h-full"
+      className="flex flex-col py-5 sm:py-1 max-sm:py-3 rounded-md max-sm:rounded-2xl sm:rounded-2xl space-y-3 overflow-y-scroll h-full"
       variants={{
         hidden: { opacity: 0 },
         show: {

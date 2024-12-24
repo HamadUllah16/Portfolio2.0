@@ -16,7 +16,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 show: { opacity: 1 }
             }}
             key={work.id}
-            className="border bg-secondary rounded-lg h-fit w-full"
+            className="border bg-secondary rounded-lg sm:rounded-2xl max-sm:rounded-2xl h-fit w-full"
             onMouseEnter={() => setShow(true)}
             onMouseLeave={() => setShow(false)}
         >

@@ -28,7 +28,7 @@ function MobileNav() {
     }, [pathname])
 
     return (
-        <div className='h-fit max-sm:flex hidden relative z-40 '>
+        <div className='h-fit md:hidden sm:flex max-sm:flex hidden relative z-40 '>
             <div className='fixed bottom-0 left-0 h-16 bg-white border border-t w-full'>
                 <div className='relative flex items-center justify-center h-full p-2 overflow-hidden'>
                     {navItems.map((item, index) => (

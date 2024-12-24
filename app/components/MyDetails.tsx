@@ -12,6 +12,7 @@ function MyDetails() {
     return (
         <div className="flex flex-col gap-5
         lg:w-fit lg:flex-col xl:w-fit lg:p-0
+        md:items-start
         max-sm:items-center max-sm:p-2 max-sm:h-full max-sm:flex-row max-sm:gap-2
         sm:items-center sm:justify-start sm:p-5 sm:flex-row
         ">
@@ -28,7 +29,7 @@ function MyDetails() {
                     src={pfp}
                     alt='a profile picture'
                     fill
-                    style={{ objectFit: 'cover', borderRadius: '3rem' }}
+                    style={{ objectFit: 'cover', borderRadius: '2rem' }}
                 />
             </div>
 

@@ -6,7 +6,7 @@ const upwork = '/upwork.png'
 
 function FreelanceCard() {
     return (
-        <div className='flex flex-col gap-2 border border-input rounded-lg p-3'>
+        <div className='flex flex-col gap-2 border border-input rounded-lg p-3 sm:rounded-2xl max-sm:rounded-2xl'>
             <div className='flex w-full relative justify-center bg-secondary p-4 rounded-md border-input'>
                 <Image
                     src={upwork}

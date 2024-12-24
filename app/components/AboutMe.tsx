@@ -1,6 +1,6 @@
 function AboutMe() {
     return (
-        <div className="py-5 flex flex-col gap-3">
+        <div className="py-5 sm:py-1 max-sm:py-3 flex flex-col gap-3">
             <p>
                 I am a <strong>Software Engineer</strong> with a passion for designing and building user-centric interfaces that deliver exceptional user experiences. My journey in tech began in 2022 as a Front-End Developer, where I initially struggled with elements like color schemes, typography, and design principles. Over time, I developed a deep appreciation for these details, which now significantly influence my work.
             </p>
