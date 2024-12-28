@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
@@ -9,11 +9,11 @@ import WorkCard from './components/WorkCard';
 export default function Home() {
   const { allWork } = useSelector((state: RootState) => state.work)
   const [error, setError] = useState<string | null>(null);
+
   const colors = ['bg-gradient-to-r from-fuchsia-500 to-cyan-500', 'bg-gradient-to-r from-red-500 to-orange-500', 'bg-gradient-to-r from-fuchsia-500 to-pink-500', 'bg-green-700', 'bg-indigo-600']
 
   const dispatch = useDispatch<AppDispatch>();
 
-  // Fetching all work items from the API
   const getAllWork = async () => {
     try {
       const response = await fetch('/api/work', { method: 'GET' });
@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <motion.div
-      className="flex flex-col py-5 sm:py-1 max-sm:py-3 rounded-md max-sm:rounded-2xl sm:rounded-2xl space-y-3 overflow-y-scroll h-full"
+      className="flex flex-col py-5 sm:py-1 max-sm:py-3 rounded-md max-sm:rounded-2xl sm:rounded-2xl space-y-3 overflow-y-scroll h-full relative"
       variants={{
         hidden: { opacity: 0 },
         show: {
@@ -58,7 +58,7 @@ export default function Home() {
     >
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
-        allWork.map((work: any, index) => (
+        [...allWork].sort((a: any, b: any) => a.id - b.id).map((work: any, index) => (
           <WorkCard
             key={work.id}
             work={work}

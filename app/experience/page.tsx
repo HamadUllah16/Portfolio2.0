@@ -45,7 +45,7 @@ function ExperiencePage() {
                                         animate={{
                                             height: '100%'
                                         }}
-                                        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 + index * 0.6, }}
+                                        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.3 + index * 0.6, }}
                                     />
                                     <motion.div
                                         className='w-6 h-6 sm:block max-sm:hidden rounded-full bg-slate-800 absolute flex justify-center items-center'
@@ -55,7 +55,7 @@ function ExperiencePage() {
                                         animate={{
                                             scale: 1
                                         }}
-                                        transition={{ delay: index * 0.6, ease: 'easeInOut', bounce: 0.5, bounceStiffness: 300 }}
+                                        transition={{ delay: index * 0.4, ease: 'easeInOut', bounce: 0.5, bounceStiffness: 300 }}
                                     >
                                     </motion.div>
                                 </motion.div>
