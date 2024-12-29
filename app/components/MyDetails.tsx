@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Button } from '../../components/ui/button'
 import FacebookMetaIcon from '@/custom-icons/FacebookMetaIcon'
-import { BookOpenCheck } from 'lucide-react'
+import { BookOpenCheck, MapPin } from 'lucide-react'
 import SocialButtons from './SocialButtons'
 const pfp = '/pfp.jpg'
 
@@ -22,7 +22,7 @@ function MyDetails() {
                 lg:size-60
                     md:size-40 md:min-w-40
                     sm:size-40
-                    max-sm:size-40 max-sm:min-w-40
+                    max-sm:size-32 max-sm:min-w-32
                     '
             >
                 <Image
@@ -36,23 +36,33 @@ function MyDetails() {
 
 
             <div className='
-            flex flex-col justify-center gap-3 w-full
+            flex flex-col justify-center gap-2 w-full
             md:w-full
             sm:w-fit sm:col-span-2 sm:items-start
             max-sm:w-full max-sm:items-start
             '>
+
                 <h3 className='text-2xl lg:text-primary sm:text-white max-sm:text-white font-bold max-sm:text-center sm:text-center'>
                     Hamad Ullah
                 </h3>
-                <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap lg:text-primary sm:text-white max-sm:text-white'>
-                    Software Engineer specialized in Front-End Development.
-                </h6>
+                <div className='flex gap-2 items-start'>
+                    {/* <Circle size={25} /> */}
+                    <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap lg:text-primary sm:text-white max-sm:text-white'>
+                        Software Engineer specialized in Front-End Development.
+                    </h6>
+                </div>
+                <div className='flex gap-2 items-center'>
+                    <MapPin size={16} />
+                    <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap lg:text-primary sm:text-white max-sm:text-white'>
+                        Peshawar
+                    </h6>
+                </div>
                 <div className='lg:hidden xl:hidden md:block sm:block max-sm:block'>
                     <SocialButtons />
                 </div>
             </div>
 
-            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-fit
+            <div className={`flex flex-col gap-2 sm:hidden max-sm:hidden lg:flex lg:w-fit
                 md:hidden
                 `}>
                 <h3 className='text-2xl font-bold md:text-start max-sm:text-center sm:text-center '>
@@ -66,7 +76,7 @@ function MyDetails() {
                     >
                         <Button
                             variant={'link'}
-                            className='rounded-xl text-xs px-0 py-0'
+                            className='rounded-xl text-xs px-0 py-0 h-1'
                         >
                             <BookOpenCheck />
                             Decentralized Electronic Voting System
@@ -80,7 +90,7 @@ function MyDetails() {
                     >
                         <Button
                             variant={'link'}
-                            className='rounded-xl text-xs px-0 py-0'
+                            className='rounded-xl text-xs px-0 py-0 h-1'
                         >
                             <FacebookMetaIcon />
                             Meta Front-End Specialization
