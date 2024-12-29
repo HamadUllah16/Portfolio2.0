@@ -13,13 +13,14 @@ function ExperiencePage() {
     ]
 
     return (
-        <div className='py-5 sm:py-1 max-sm:py-4 h-full'>
+        <div
+            className='py-5 sm:py-1 max-sm:py-4 h-full'>
             <div className='flex relative h-full'>
                 <motion.div
                     className='flex flex-col w-full'
                     variants={{
-                        hidden: { opacity: 0 },
-                        show: { opacity: 1, transition: { staggerChildren: 0.7, } },
+                        hidden: { opacity: 0, x: -40 },
+                        show: { opacity: 1, x: 0, transition: { staggerChildren: 0.7, type: 'keyframes' } },
                     }}
                     initial='hidden'
                     animate='show'

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased max-h-svh h-dvh relative lg:overflow-hidden max-sm:overflow-hidden bg-slate-800`}
+        className={`${poppins.className} antialiased h-dvh relative lg:overflow-hidden max-sm:overflow-hidden bg-slate-800`}
       >
         <Toaster position="top-center" />
 
@@ -40,7 +40,7 @@ export default function RootLayout({
           lg:mx-24 lg:h-[80%]
           xl:mx-40
           md:px-5 md:h-[80%] md:mx-20
-          sm:px-2 sm:h-full sm:md:5
+          sm:px-2 sm:md:5
           max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:py-0
           lg:overflow-hidden
 

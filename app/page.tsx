@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
@@ -43,11 +43,15 @@ export default function Home() {
 
   return (
     <motion.div
-      className="flex flex-col py-5 sm:py-1 max-sm:py-3 rounded-md max-sm:rounded-2xl sm:rounded-2xl space-y-3 overflow-y-scroll h-full relative"
+      className="
+      sm:py-1 max-sm:py-3
+      max-sm:rounded-2xl sm:rounded-2xl
+      flex flex-col py-5 rounded-md space-y-3 overflow-y-scroll h-full relative"
       variants={{
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0, left: -40 },
         show: {
           opacity: 1,
+          left: 0,
           transition: {
             staggerChildren: 0.25,
           }

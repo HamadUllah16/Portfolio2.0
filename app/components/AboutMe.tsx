@@ -1,6 +1,18 @@
+'use client'
+import { motion } from "motion/react";
+
+
 function AboutMe() {
     return (
-        <div className="py-5 sm:py-1 max-sm:py-3 flex flex-col gap-3">
+        <motion.div
+            className="py-5 sm:py-1 max-sm:py-3 flex flex-col gap-3"
+            variants={{
+                hidden: { opacity: 0, x: -40 },
+                show: { opacity: 1, x: 0, transition: { staggerChildren: 0.7, type: 'keyframes' } },
+            }}
+            initial='hidden'
+            animate='show'
+        >
             <p>
                 I am a <strong>Software Engineer</strong> with a passion for designing and building user-centric interfaces that deliver exceptional user experiences. My journey in tech began in 2022 as a Front-End Developer, where I initially struggled with elements like color schemes, typography, and design principles. Over time, I developed a deep appreciation for these details, which now significantly influence my work.
             </p>
@@ -13,7 +25,7 @@ function AboutMe() {
             <p>
                 Currently, I am focused on my <strong>Final Year Project</strong>, a <strong>Decentralized Electronic Voting Application</strong>. This project aims to enhance voting processes by making them <strong>more secure, anonymous, and cost-effective</strong>. It is a culmination of my skills, combining <strong>React</strong>, <strong>Next.js</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, and <strong>Solana smart contracts</strong> to build an impactful and innovative application.
             </p>
-        </div>
+        </motion.div>
     );
 }
 
