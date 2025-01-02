@@ -3,18 +3,19 @@ import React from 'react'
 import Experience from '../components/Experience'
 const upwork = '/upwork.png'
 const dextro = '/dextro.png'
+const grayhat = '/grayhat.png'
 import { motion } from 'motion/react'
 
 function ExperiencePage() {
 
     const experiences = [
+        { img: grayhat, from: 'Jan 2025', to: 'Current', techstack: ["NextJS", "ShadCN", "ZuStand"] },
         { img: dextro, from: 'May 2024', to: 'Sep 2024', techstack: ["NextJS", "MUI", "Redux", "Axios", "Figma"] },
         { img: upwork, from: "Sep 2021", to: "Now", techstack: ["HTML", "CSS", "SQL", "WordPress"] }
     ]
 
     return (
-        <div
-            className='py-5 sm:py-1 max-sm:py-4 h-full'>
+        <div className='py-5 sm:py-1 max-sm:py-4 h-full'>
             <div className='flex relative h-full'>
                 <motion.div
                     className='flex flex-col w-full'
@@ -35,7 +36,7 @@ function ExperiencePage() {
                             >
 
                                 <motion.div
-                                    className='h-52 w-1 relative'
+                                    className='h-40 w-1 relative'
                                 >
 
                                     <motion.div
@@ -61,20 +62,7 @@ function ExperiencePage() {
                                     </motion.div>
                                 </motion.div>
 
-                                <motion.div
-                                    className='overflow-hidden max-sm:z-30'
-                                // initial={{
-                                //     scale: 0,
-                                //     opacity: 0
-                                // }}
-                                // animate={{
-                                //     scale: 1,
-                                //     opacity: 1
-                                // }}
-                                // transition={{
-                                //     delay: 0.25
-                                // }}
-                                >
+                                <motion.div className='overflow-hidden max-sm:z-30'>
                                     <Experience
                                         img={experience.img}
                                         from={experience.from}

@@ -10,22 +10,6 @@ function Header() {
                     i edit buttons.
                 </h5>
             </div>
-            {/* <div
-                className='
-            flex relative py-4
-            items-center gap-8
-            lg:px-40
-            md:px-14
-            md:flex
-            md:items-center
-            min-md:justify-center
-            max-md:flex-col
-            sm:px-5
-            '
-            >
-                {children}
-            </div> */}
-
         </div >
     )
 }

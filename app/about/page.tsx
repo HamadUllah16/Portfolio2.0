@@ -4,7 +4,7 @@ import AboutMe from '../components/AboutMe'
 
 function AboutPage() {
     return (
-        <AboutMe />
+        <AboutMe key={'about-me-page'} />
     )
 }
 
