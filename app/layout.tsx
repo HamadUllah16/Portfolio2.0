@@ -39,22 +39,19 @@ export default function RootLayout({
           bg-white border rounded-3xl
           lg:mx-24 lg:h-full
           xl:mx-40
-          md:px-5 md:h-full md:mx-20
-          sm:px-2 sm:md:5
-          max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:py-0
+          md:px-5 md:h-fit md:mx-5 md:flex-row
+          sm:px-2 sm:md:5 sm:flex-col
+          max-sm:-bottom-5 max-sm:h-fit max-sm:w-full max-sm:py-0 max-sm:flex-col
           lg:overflow-hidden
 
           ">
           <div className="
-           flex flex-col gap-3 justify-between pb-5
-           sm:w-full sm:items-center sm:absolute sm:top-0 sm:left-0
-           max-sm:items-center max-sm:w-full max-sm:absolute max-sm:top-0 max-sm:left-0 max-sm:pb-0
+           flex flex-col gap-3 pb-5
             xl:w-fit
             lg:col-span-1 lg:relative lg:w-fit
-            md:absolute md:top-0 md:left-0
             ">
             <MyDetails />
-            <div className="sm:hidden max-sm:hidden lg:block md:hidden">
+            <div className="flex justify-center md:mt-10 sm:mt-0 max-sm:mt-0">
               <SocialButtons />
             </div>
           </div>

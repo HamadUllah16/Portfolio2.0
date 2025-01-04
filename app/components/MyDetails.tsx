@@ -10,9 +10,9 @@ function MyDetails() {
     return (
         <div className="flex flex-col gap-5
         lg:w-fit lg:flex-col xl:w-fit lg:p-0
-        md:items-start
-        max-sm:items-center max-sm:p-2 max-sm:h-full max-sm:flex-row max-sm:gap-2
-        sm:items-center sm:justify-start sm:p-5 sm:flex-row
+        md:items-start md:flex-col
+        max-sm:items-start max-sm:p-2 max-sm:h-full max-sm:flex-row max-sm:gap-2
+        sm:items-start sm:justify-start sm:p-0 sm:flex-row
         ">
             <div style={{ borderRadius: '70px', }}
                 className='
@@ -40,18 +40,18 @@ function MyDetails() {
             max-sm:w-full max-sm:items-start
             '>
 
-                <h3 className='text-2xl lg:text-primary sm:text-white max-sm:text-white font-bold max-sm:text-center sm:text-center'>
+                <h3 className='text-2xl lg:text-primary font-bold'>
                     Hamad Ullah
                 </h3>
                 <div className='flex gap-2 items-start'>
                     {/* <Circle size={25} /> */}
-                    <h6 className='md:max-w-80 max-sm:w-full text-sm text-wrap lg:text-primary sm:text-white max-sm:text-white'>
+                    <h6 className='text-sm text-wrap lg:text-primary'>
                         Software Engineer specialized in Front-End Development.
                     </h6>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <Building2 size={14} />
-                    <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary sm:text-white max-sm:text-white'>
+                    <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                         Web Developer Intern {""}@
                         <Link
                             className='underline'
@@ -66,20 +66,15 @@ function MyDetails() {
                     <div className='w-3'>
                         <GraduationCap size={14} />
                     </div>
-                    <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary sm:text-white max-sm:text-white'>
+                    <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                         Abasyn University
                     </h6>
                 </div>
                 <div className='flex gap-2 items-center'>
                     <MapPin size={14} />
-                    <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary sm:text-white max-sm:text-white'>
+                    <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                         Peshawar
                     </h6>
-                </div>
-
-
-                <div className='lg:hidden xl:hidden md:block sm:block max-sm:block'>
-                    <SocialButtons />
                 </div>
             </div>
 
@@ -94,7 +89,7 @@ function MyDetails() {
                         <BookOpenCheck size={14} />
                         <Link
                             href={'https://trustvote-client.vercel.app/'}
-                            className='md:max-w-80 max-sm:w-full underline text-xs text-wrap lg:text-primary sm:text-white max-sm:text-white'
+                            className='md:max-w-80 max-sm:w-full underline text-xs text-wrap lg:text-primary'
                         >
                             Decentralized Electronic Voting System
                         </Link>
@@ -105,7 +100,7 @@ function MyDetails() {
                         </div>
                         <Link
                             href={'https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url'}
-                            className='md:max-w-80 max-sm:w-full underline text-xs text-wrap lg:text-primary sm:text-white max-sm:text-white'
+                            className='md:max-w-80 max-sm:w-full underline text-xs text-wrap lg:text-primary'
                         >
                             Meta Front-End Specialization
                         </Link>

@@ -46,7 +46,7 @@ export default function Home() {
       className="
       sm:py-1 max-sm:py-3
       max-sm:rounded-2xl sm:rounded-2xl
-      flex flex-col py-5 rounded-md space-y-3 overflow-y-scroll h-full relative"
+      flex flex-col py-5 rounded-md space-y-3 h-full relative"
       variants={{
         hidden: { opacity: 0, left: -40 },
         show: {

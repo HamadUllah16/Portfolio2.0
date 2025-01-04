@@ -53,14 +53,14 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 </div>
 
                 {/* Text and Badge Section */}
-                <div className='flex flex-col gap-2 w-full justify-center relative'>
+                <div className='flex flex-wrap flex-col gap-2 w-full justify-center relative'>
                     <LinkIcon className='absolute right-0 top-0 max-sm:hidden' size={'12px'} />
 
-                    <div className='flex gap-1 justify-between items-center'>
+                    <div className='flex flex-wrap gap-1 justify-between items-center'>
                         <h3 className="font-bold text-lg">{work.title}</h3>
                         <Badge variant={work.status === 'Completed' ? 'success' : 'progress'} className='h-fit'>{work.status}</Badge>
                     </div>
-                    <p className='text-sm'>{work.description}</p>
+                    <p className='text-sm text-wrap'>{work.description}</p>
                     <div className="flex flex-wrap gap-1 border-t-2 pt-2 overflow-y-auto overflow-x-hidden">
                         {work.technologies.map((tech, index: number) => (
                             <Badge key={index} variant={'default'} >

@@ -4,7 +4,7 @@ import { Github, Linkedin } from 'lucide-react'
 
 function SocialButtons() {
     return (
-        <div className='flex gap-2 max-sm:justify-center'>
+        <div className='flex flex-wrap gap-2 max-sm:justify-center'>
             <a href={'https://drive.google.com/drive/folders/1qfen1IlVD3V-dI6xLf25zWJ8G16kPIeh?usp=sharing'} target='_blank'>
                 <Button>
                     Resume

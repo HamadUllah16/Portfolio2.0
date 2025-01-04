@@ -53,7 +53,7 @@ function NavItems({ navItems }: { navItems: { link: string, title: string, count
     }, [allWork.length]);
 
     return (
-        <div className='flex gap-0 relative flex-wrap sm:justify-center'>
+        <div className='flex gap-0 relative flex-nowrap sm:justify-center'>
             {navItems.map((nav, index) => {
                 return (
                     <Link
