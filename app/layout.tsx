@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
 import ReduxProvider from "./redux/ReduxProvider";
 import { Poppins } from 'next/font/google';
 import { Toaster } from "../components/ui/sonner";

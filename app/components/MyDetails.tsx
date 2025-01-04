@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
-import SocialButtons from './SocialButtons'
 const pfp = '/pfp.jpg'
 
 
