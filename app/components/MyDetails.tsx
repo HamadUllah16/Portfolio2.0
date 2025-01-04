@@ -27,7 +27,7 @@ function MyDetails() {
                     src={pfp}
                     alt='a profile picture'
                     fill
-                    style={{ objectFit: 'cover', borderRadius: '2rem' }}
+                    style={{ objectFit: 'cover', borderRadius: '1.3rem' }}
                 />
             </div>
 
