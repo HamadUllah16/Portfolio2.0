@@ -9,6 +9,7 @@ import InitialLoading from "./components/InitialLoading";
 import MobileNav from "./components/MobileNav";
 import MyDetails from "./components/MyDetails";
 import SocialButtons from "./components/SocialButtons";
+import { Separator } from "../components/ui/separator";
 
 const poppins = Poppins({
   weight: ['300', '700'],
@@ -60,6 +61,7 @@ export default function RootLayout({
             <InitialLoading />
             <div className="flex flex-col gap-5 max-sm:w-full max-sm:px-2 pb-5 h-full lg:overflow-hidden xl:w-full lg:w-full">
               <Navbar />
+              <Separator />
               {children}
 
               {/* below is a dummy div to take space of mobile nav since fixed/absolute arent counted in flow */}

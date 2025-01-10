@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { BriefcaseBusiness, Home, Shell, SquareUserRound } from 'lucide-react'
 
 function MobileNav() {
     const pathname = usePathname()
@@ -10,10 +11,10 @@ function MobileNav() {
     const navRefs = useRef<(HTMLAnchorElement | null)[]>([])
 
     const navItems = [
-        { label: 'Work', path: '/' },
-        { label: 'Experience', path: '/experience' },
-        { label: 'About', path: '/about' },
-        { label: 'Freelance', path: '/freelance' },
+        { label: 'Work', path: '/', icon: <Home /> },
+        { label: 'Experience', path: '/experience', icon: <BriefcaseBusiness /> },
+        { label: 'About', path: '/about', icon: <SquareUserRound /> },
+        { label: 'Freelance', path: '/freelance', icon: <Shell /> },
     ]
 
     useEffect(() => {
@@ -43,7 +44,7 @@ function MobileNav() {
                                 color: pathname.endsWith(item.path) ? 'white' : 'black'
                             }}
                         >
-                            {item.label}
+                            {item.icon}
                         </Link>
                     ))}
 

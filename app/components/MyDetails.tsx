@@ -49,7 +49,9 @@ function MyDetails() {
                     </h6>
                 </div>
                 <div className='flex gap-2 items-center'>
-                    <Building2 size={14} />
+                    <div className='w-3'>
+                        <Building2 size={14} />
+                    </div>
                     <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                         Web Developer Intern {""}@
                         <Link
@@ -66,7 +68,7 @@ function MyDetails() {
                         <GraduationCap size={14} />
                     </div>
                     <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                        Abasyn University
+                        BS Software Engineering
                     </h6>
                 </div>
                 <div className='flex gap-2 items-center'>
