@@ -41,7 +41,7 @@ function MobileNav() {
                             href={item.path}
                             className={`flex items-center justify-center z-20 rounded-none h-full w-full transition-all duration-300 ease-in-out relative`}
                             style={{
-                                color: pathname.endsWith(item.path) ? 'white' : 'black'
+                                color: pathname.endsWith(item.path) ? 'white' : 'black',
                             }}
                         >
                             {item.icon}

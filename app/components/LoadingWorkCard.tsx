@@ -1,11 +1,6 @@
 'use client'
-import Link from 'next/link';
-import React, { useState } from 'react'
-import { Button } from '../../components/ui/button';
-import { Badge } from '../../components/ui/badge';
-import { LinkIcon } from 'lucide-react';
+import React from 'react'
 import { motion } from 'motion/react'
-import Image from 'next/image';
 import { Skeleton } from '../../components/ui/skeleton';
 
 function LoadingWorkCard() {

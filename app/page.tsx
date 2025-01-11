@@ -62,6 +62,9 @@ export default function Home() {
       initial="hidden"
       animate='show'
     >
+      <h3 className='text-2xl md:text-left sm:text-center font-medium'>
+        All Projects
+      </h3>
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
         [...allWork].sort((a: any, b: any) => a.id - b.id).map((work: any, index) => (

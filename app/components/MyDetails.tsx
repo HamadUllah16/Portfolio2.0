@@ -8,8 +8,8 @@ const pfp = '/pfp.jpg'
 function MyDetails() {
     return (
         <div className="flex flex-col gap-5
-        lg:w-fit lg:flex-col xl:w-fit lg:p-0
-        md:items-start md:flex-col
+        lg:w-fit lg:flex-col xl:w-fit lg:p-0 lg:max-w-60
+        md:items-start md:flex-col md:max-w-40
         max-sm:items-start max-sm:p-2 max-sm:h-full max-sm:flex-row max-sm:gap-2
         sm:items-start sm:justify-start sm:p-0 sm:flex-row
         ">

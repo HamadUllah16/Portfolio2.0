@@ -35,12 +35,12 @@ export default function RootLayout({
 
         {/* <Header /> */}
         <div className="
-          flex py-5 gap-2 justify-between
+          flex py-5 gap-5 justify-between
           bg-white border rounded-3xl
           lg:mx-24 lg:h-full
           xl:mx-40
           md:px-5 md:h-fit md:mx-5 md:flex-row
-          sm:px-2 sm:md:5 sm:flex-col
+          sm:px-2 sm:py-2 sm:md:5 sm:flex-col
           max-sm:-bottom-5 max-sm:h-fit max-sm:w-full max-sm:py-0 max-sm:flex-col
           lg:overflow-hidden
 
