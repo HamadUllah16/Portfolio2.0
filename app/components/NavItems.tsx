@@ -62,9 +62,10 @@ function NavItems({ navItems }: { navItems: { link: string, title: string, count
                         ref={(el) => {
                             navRefs.current[index] = el
                         }}
-                        style={{
-                            color: pathname.endsWith(nav.link) ? 'white' : 'black'
-                        }}
+                        style={pathname.endsWith(nav.link) ?
+                            { color: 'white' } :
+                            { color: 'black' }
+                        }
                         className='z-10 p-2 transition-all duration-300 ease-in-out flex'
                     >
                         <p className='text-center'>

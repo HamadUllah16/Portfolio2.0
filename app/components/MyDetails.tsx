@@ -8,8 +8,8 @@ const pfp = '/pfp.jpg'
 function MyDetails() {
     return (
         <div className="flex flex-col gap-5
-        lg:w-fit lg:flex-col xl:w-fit lg:p-0
-        md:items-start md:flex-col
+        lg:w-fit lg:flex-col xl:w-fit lg:p-0 lg:max-w-60
+        md:items-start md:flex-col md:max-w-40
         max-sm:items-start max-sm:p-2 max-sm:h-full max-sm:flex-row max-sm:gap-2
         sm:items-start sm:justify-start sm:p-0 sm:flex-row
         ">
@@ -49,7 +49,9 @@ function MyDetails() {
                     </h6>
                 </div>
                 <div className='flex gap-2 items-center'>
-                    <Building2 size={14} />
+                    <div className='w-3'>
+                        <Building2 size={14} />
+                    </div>
                     <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                         Web Developer Intern {""}@
                         <Link
@@ -66,7 +68,7 @@ function MyDetails() {
                         <GraduationCap size={14} />
                     </div>
                     <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                        Abasyn University
+                        BS Software Engineering
                     </h6>
                 </div>
                 <div className='flex gap-2 items-center'>

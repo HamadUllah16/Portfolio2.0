@@ -9,7 +9,13 @@ function Navbar() {
 
 
     return (
-        <div className='flex flex-col gap-3 overflow-clip md:flex sm:hidden max-sm:hidden justify-center border w-fit p-2 rounded-lg'>
+        <div className='
+        flex flex-col gap-3 overflow-clip
+        md:flex
+        sm:hidden
+        max-sm:hidden
+        justify-center border w-fit p-2 rounded-lg'
+        >
             <NavItems
                 navItems={[
                     { link: '/', title: 'Work', count: allWork.length },

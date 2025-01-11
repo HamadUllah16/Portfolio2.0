@@ -5,6 +5,7 @@ import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
 import { motion } from "motion/react"
 import WorkCard from './components/WorkCard';
+import LoadingWorkCard from './components/LoadingWorkCard';
 
 export default function Home() {
   const { allWork } = useSelector((state: RootState) => state.work)
@@ -44,6 +45,7 @@ export default function Home() {
   return (
     <motion.div
       className="
+      md:overflow-y-scroll
       sm:py-1 max-sm:py-3
       max-sm:rounded-2xl sm:rounded-2xl
       flex flex-col py-5 rounded-md space-y-3 h-full relative"
@@ -60,6 +62,9 @@ export default function Home() {
       initial="hidden"
       animate='show'
     >
+      <h3 className='text-2xl md:text-left sm:text-center font-medium'>
+        All Projects
+      </h3>
       {error && <p className="text-red-500">{error}</p>}
       {allWork.length > 0 ? (
         [...allWork].sort((a: any, b: any) => a.id - b.id).map((work: any, index) => (
@@ -69,9 +74,13 @@ export default function Home() {
             bgColor={colors[index]}
           />
         ))
-      ) : (
-        <p>No work items found</p>
-      )}
+      ) :
+        [1, 2, 3, 4, 5].map((each) => {
+          return (
+            <LoadingWorkCard key={each} />
+          )
+        })
+      }
     </ motion.div>
   );
 }
