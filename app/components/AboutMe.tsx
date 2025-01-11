@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 function AboutMe() {
     return (
         <div className="flex flex-col gap-3">
-            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl md:text-left sm:text-center font-medium'>
+            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl text-center font-medium'>
                 About Me
             </motion.h3>
             <motion.div

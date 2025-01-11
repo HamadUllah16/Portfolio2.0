@@ -5,8 +5,8 @@ import React from 'react'
 
 function FreelancePage() {
     return (
-        <div className='flex flex-col gap-5'>
-            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl md:text-left sm:text-center font-medium'>
+        <div className='flex flex-col gap-3'>
+            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl text-center font-medium'>
                 Freelance Profiles
             </motion.h3>
             <motion.div
