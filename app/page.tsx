@@ -43,44 +43,47 @@ export default function Home() {
   }, [allWork.length]);
 
   return (
-    <motion.div
-      className="
+    <>
+
+      <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className=' text-2xl text-center font-medium'>
+        All Projects
+      </motion.h3>
+      <motion.div
+        className="
       md:overflow-y-scroll
       sm:py-1 max-sm:py-3
       max-sm:rounded-2xl sm:rounded-2xl
       flex flex-col py-5 rounded-md space-y-3 h-full relative"
-      variants={{
-        hidden: { opacity: 0, left: -40 },
-        show: {
-          opacity: 1,
-          left: 0,
-          transition: {
-            staggerChildren: 0.25,
+        variants={{
+          hidden: { opacity: 0, left: -40 },
+          show: {
+            opacity: 1,
+            left: 0,
+            transition: {
+              staggerChildren: 0.25,
+            }
           }
+        }}
+        initial="hidden"
+        animate='show'
+      >
+        {error && <p className="text-red-500">{error}</p>}
+        {allWork.length > 0 ? (
+          [...allWork].sort((a: any, b: any) => a.id - b.id).map((work: any, index) => (
+            <WorkCard
+              key={work.id}
+              work={work}
+              bgColor={colors[index]}
+            />
+          ))
+        ) :
+          [1, 2, 3, 4, 5].map((each) => {
+            return (
+              <LoadingWorkCard key={each} />
+            )
+          })
         }
-      }}
-      initial="hidden"
-      animate='show'
-    >
-      <h3 className='text-2xl md:text-left sm:text-center font-medium'>
-        All Projects
-      </h3>
-      {error && <p className="text-red-500">{error}</p>}
-      {allWork.length > 0 ? (
-        [...allWork].sort((a: any, b: any) => a.id - b.id).map((work: any, index) => (
-          <WorkCard
-            key={work.id}
-            work={work}
-            bgColor={colors[index]}
-          />
-        ))
-      ) :
-        [1, 2, 3, 4, 5].map((each) => {
-          return (
-            <LoadingWorkCard key={each} />
-          )
-        })
-      }
-    </ motion.div>
+      </ motion.div>
+    </>
   );
 }

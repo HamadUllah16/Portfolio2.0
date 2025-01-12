@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased h-dvh relative p-5 overflow-scroll bg-slate-800`}
+        className={`${poppins.className} antialiased h-dvh relative p-5 max-sm:p-0 overflow-scroll sm:bg-slate-800 max-sm:bg-white`}
       >
         <Toaster position="top-center" />
 
@@ -39,18 +39,19 @@ export default function RootLayout({
           bg-white border rounded-3xl
           lg:mx-24 lg:h-full
           xl:mx-40
-          md:px-5 md:h-fit md:mx-5 md:flex-row
-          sm:px-2 sm:py-2 sm:md:5 sm:flex-col
-          max-sm:-bottom-5 max-sm:h-fit max-sm:w-full max-sm:py-0 max-sm:flex-col
+          md:p-5 md:h-fit md:mx-5 md:flex-row
+          sm:p-5 sm:md:5 sm:flex-col sm:h-full
+          max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:p-2 max-sm:flex-col max-sm:rounded-none
           lg:overflow-hidden
 
           ">
           <div className="
-           flex flex-col gap-3 pb-5
+           flex flex-col gap-3 md:pb-5 max-sm:pb-0
             xl:w-fit
             lg:col-span-1 lg:relative lg:w-fit
             ">
             <MyDetails />
+            <p className='text-xs sm:hidden px-5 max-sm:block'>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
             <div className="flex justify-center md:mt-10 sm:mt-0 max-sm:mt-0">
               <SocialButtons />
             </div>
@@ -59,7 +60,7 @@ export default function RootLayout({
           <ReduxProvider>
             <CopyEmail />
             <InitialLoading />
-            <div className="flex flex-col gap-5 max-sm:w-full max-sm:px-2 pb-5 h-full lg:overflow-hidden xl:w-full lg:w-full">
+            <div className="flex flex-col gap-5 w-full max-sm:w-full max-sm:px-2 pb-5 h-full lg:overflow-hidden xl:w-full lg:w-full">
               <Navbar />
               <Separator />
               {children}
