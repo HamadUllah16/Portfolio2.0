@@ -1,9 +1,5 @@
-import { Circle } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-const upwork = '/upwork.png'
-const dextro = '/dextro.png'
-const grayhat = '/grayhat.png'
 
 interface ExperienceType {
     role: string,
@@ -15,11 +11,7 @@ interface ExperienceType {
 }
 
 function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
-    const experiences = [
-        { role: 'Web Developer', company: 'Grayhat Developers', img: grayhat, from: 'Jan 2025', to: 'Current', techstack: ["NextJS", "ShadCN", "ZuStand"] },
-        { role: 'Front-End Engineer', company: 'Dextro', img: dextro, from: 'May 2024', to: 'Sep 2024', techstack: ["NextJS", "MUI", "Redux", "Axios", "Figma"] },
-        { role: 'Freelance Developer', company: 'Upwork', img: upwork, from: "Sep 2021", to: "Now", techstack: ["HTML", "CSS", "SQL", "WordPress"] }
-    ]
+
     return (
         <div className='flex flex-col max-w-96'>
 

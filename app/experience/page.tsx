@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import Experience from '../components/Experience'
 import { motion } from 'motion/react'
 import WorkExperienceV2 from '@/components/WorkExperienceV2'
 import { Separator } from '../../components/ui/separator'
