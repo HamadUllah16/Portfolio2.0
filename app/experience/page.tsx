@@ -19,10 +19,10 @@ function ExperiencePage() {
 
     return (
         <div className='flex flex-col gap-3 h-full'>
-            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl text-center font-medium'>
+            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-3xl font-medium'>
                 Work Experience
             </motion.h3>
-            <div className='flex relative h-full py-5 sm:py-1 max-sm:py-3'>
+            <div className='flex relative h-full m-5 sm:py-1 max-sm:py-3'>
                 <motion.div
                     className='flex flex-col w-full'
                     variants={{

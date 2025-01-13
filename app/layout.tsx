@@ -37,7 +37,7 @@ export default function RootLayout({
         <div className="
           flex py-5 gap-5 justify-between
           bg-white border rounded-3xl
-          lg:mx-24 lg:h-full
+          lg:mx-24 lg:h-full lg:gap-16
           xl:mx-40
           md:p-5 md:h-fit md:mx-5 md:flex-row
           sm:p-5 sm:md:5 sm:flex-col sm:h-full
@@ -56,7 +56,7 @@ export default function RootLayout({
               <SocialButtons />
             </div>
           </div>
-
+          <Separator orientation="vertical" />
           <ReduxProvider>
             <CopyEmail />
             <InitialLoading />

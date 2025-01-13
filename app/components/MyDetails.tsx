@@ -8,7 +8,7 @@ const pfp = '/pfp.jpg'
 
 function MyDetails() {
     return (
-        <div className="flex flex-col gap-5
+        <div className="flex flex-col gap-6
         lg:w-fit lg:flex-col xl:w-fit lg:p-0 lg:max-w-60
         md:items-start md:flex-col md:max-w-40
         max-sm:items-start max-sm:px-5 max-sm:pt-5 max-sm:h-full max-sm:flex-row max-sm:gap-5
@@ -34,25 +34,25 @@ function MyDetails() {
 
 
             <div className='
-            flex flex-col justify-center gap-4 w-full
+            flex flex-col justify-center gap-3 w-full
             md:w-full
             sm:w-fit sm:col-span-2 sm:items-start
             max-sm:w-full max-sm:items-start max-sm:gap-1
             '>
-                <h3 className='text-2xl lg:text-primary font-bold'>
-                    Hamad Ullah
-                </h3>
+                <div className='flex flex-col gap-0 items-start'>
+                    <h3 className='text-3xl lg:text-primary font-bold'>
+                        Hamad Ullah
+                    </h3>
 
-                <div className='flex flex-col gap-2 items-start'>
-                    <h6 className='text-sm text-wrap lg:text-primary'>
+                    <h4 className='text-lg text-wrap lg:text-primary'>
                         Front-End Engineer
-                    </h6>
-                    <p className='text-xs max-sm:hidden'>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
+                    </h4>
                 </div>
+                <p className='text-sm max-sm:hidden '>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
 
 
                 <div className='space-y-1'>
-                    <div className='flex gap-2 items-center  text-muted-foreground'>
+                    <div className='flex gap-3 items-center  text-muted-foreground'>
                         <div className='w-3'>
                             <Building2 size={14} />
                         </div>
@@ -67,7 +67,7 @@ function MyDetails() {
                             </Link>
                         </p>
                     </div>
-                    <div className='flex gap-2 items-center  text-muted-foreground'>
+                    <div className='flex gap-3 items-center  text-muted-foreground'>
                         <div className='w-3'>
                             <GraduationCap size={14} />
                         </div>
@@ -75,7 +75,7 @@ function MyDetails() {
                             BS Software Engineering
                         </h6>
                     </div>
-                    <div className='flex gap-2 items-center  text-muted-foreground'>
+                    <div className='flex gap-3 items-center  text-muted-foreground'>
                         <MapPin size={14} />
                         <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                             Peshawar, Pakistan
@@ -84,25 +84,25 @@ function MyDetails() {
                 </div>
             </div>
 
-            <div className={`flex flex-col gap-2 sm:hidden max-sm:hidden lg:flex lg:w-fit
+            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-fit
                 md:hidden
                 `}>
-                <h3 className='text-2xl font-bold md:text-start max-sm:text-center sm:text-center '>
+                <h3 className='text-3xl font-bold md:text-start max-sm:text-center sm:text-center '>
                     Accomplishments
                 </h3>
-                <div className='flex gap-2 flex-col text-muted-foreground md:items-start max-sm:items-center sm:items-center'>
-                    <div className='flex gap-2 items-center'>
-                        <BookOpenCheck size={14} />
+                <div className='flex gap-2 flex-col md:items-start max-sm:items-center sm:items-center'>
+                    <div className='flex gap-3 items-center'>
+                        <BookOpenCheck size={14} className='text-muted-foreground' />
                         <Link
                             href={'https://trustvote-client.vercel.app/'}
                             className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'
                         >
-                            <p>Decentralized Electronic Voting System</p>
+                            Decentralized Electronic Voting System
                         </Link>
                     </div>
-                    <div className='flex gap-2 items-center'>
+                    <div className='flex gap-3 items-center'>
                         <div className='w-3'>
-                            <Award size={14} />
+                            <Award size={14} className='text-muted-foreground' />
                         </div>
                         <Link
                             href={'https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url'}
