@@ -26,7 +26,7 @@ export default function InitialLoading() {
     }, []);
 
     return (
-        <div className={`${progress === 100 ? 'opacity-0 -z-50' : 'opacity-100 z-50'} bg-white flex-col gap-5 transition-all duration-300 ease-in-out fixed inset-0 flex items-center justify-center "`}>
+        <div className={`${progress === 100 ? 'opacity-0 hidden -z-50' : 'opacity-100 z-50'} bg-white flex-col gap-5 transition-all duration-300 ease-in-out fixed inset-0 flex items-center justify-center "`}>
             <div className={`flex flex-col gap-2 w-full justify-center items-center`}>
                 <div className="flex flex-col w-4/5 max-w-lg gap-5">
 

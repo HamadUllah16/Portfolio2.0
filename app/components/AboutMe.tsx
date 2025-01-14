@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 function AboutMe() {
     return (
         <div className="flex flex-col gap-3">
-            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl text-center font-medium'>
+            <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl font-bold'>
                 About Me
             </motion.h3>
             <motion.div
-                className="py-5 sm:py-1 max-sm:py-3 flex flex-col gap-3"
+                className="p-5 sm:py-1 max-sm:py-3 flex flex-col gap-3"
                 variants={{
                     hidden: { opacity: 0, x: -40 },
                     show: { opacity: 1, x: 0, transition: { staggerChildren: 0.7, type: 'keyframes' } },

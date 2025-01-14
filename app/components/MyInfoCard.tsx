@@ -8,7 +8,14 @@ const pfp = '/pfp.jpg'
 
 function MyInfoCard() {
     return (
-        <div className='
+        <motion.div
+            initial={{
+                scale: 0,
+            }}
+            animate={{
+                scale: 1,
+            }}
+            className='
         flex
         p-4
         gap-2
@@ -66,7 +73,7 @@ function MyInfoCard() {
                     </div>
                 </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
