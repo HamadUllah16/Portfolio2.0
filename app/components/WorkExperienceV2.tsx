@@ -32,7 +32,7 @@ function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
                 </div>
 
                 {/* actual card */}
-                <div className='flex gap-2 flex-grow pb-5 overflow-hidden p-2'>
+                <div className='flex gap-2 flex-grow overflow-hidden p-2'>
                     {/* card image */}
                     <div className='h-full w-full max-w-28 bg-input rounded-md relative'>
                         <Image

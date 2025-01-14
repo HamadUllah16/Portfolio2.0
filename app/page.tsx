@@ -45,14 +45,15 @@ export default function Home() {
   return (
     <>
 
-      <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className=' text-2xl text-center font-medium'>
+      <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl font-bold'>
         All Projects
       </motion.h3>
       <motion.div
         className="
+        p-5
       md:overflow-y-scroll
-      sm:py-1 max-sm:py-3
-      max-sm:rounded-2xl sm:rounded-2xl
+      sm:py-1 sm:h-full
+      max-sm:rounded-2xl max-sm:py-3 sm:rounded-2xl
       flex flex-col py-5 rounded-md space-y-3 h-full relative"
         variants={{
           hidden: { opacity: 0, left: -40 },

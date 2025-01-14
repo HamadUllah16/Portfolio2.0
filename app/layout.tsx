@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased h-dvh relative p-5 max-sm:p-0 overflow-scroll sm:bg-slate-800 max-sm:bg-white`}
+        className={`${poppins.className} antialiased h-dvh md:h-dvh max-sm:h-full sm:h-full relative p-5 max-sm:p-0 overflow-scroll sm:bg-slate-800 max-sm:bg-white`}
       >
         <Toaster position="top-center" />
 
@@ -37,9 +37,9 @@ export default function RootLayout({
         <div className="
           flex py-5 gap-5 justify-between
           bg-white border rounded-3xl
-          lg:mx-24 lg:h-full
+          lg:mx-24 lg:h-full lg:gap-16
           xl:mx-40
-          md:p-5 md:h-fit md:mx-5 md:flex-row
+          md:p-5 md:min-h-full md:mx-5 md:flex-row
           sm:p-5 sm:md:5 sm:flex-col sm:h-full
           max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:p-2 max-sm:flex-col max-sm:rounded-none
           lg:overflow-hidden
@@ -56,13 +56,16 @@ export default function RootLayout({
               <SocialButtons />
             </div>
           </div>
-
+          <Separator orientation="vertical" className="md:block max-sm:hidden sm:hidden" />
           <ReduxProvider>
             <CopyEmail />
             <InitialLoading />
-            <div className="flex flex-col gap-5 w-full max-sm:w-full max-sm:px-2 pb-5 h-full lg:overflow-hidden xl:w-full lg:w-full">
+            <div className="flex flex-col gap-5 w-full h-full
+            sm:h-full
+            max-sm:w-full max-sm:h-full max-sm:px-2 pb-5
+            lg:overflow-hidden xl:w-full lg:w-full">
               <Navbar />
-              <Separator />
+              {/* <Separator /> */}
               {children}
 
               {/* below is a dummy div to take space of mobile nav since fixed/absolute arent counted in flow */}
