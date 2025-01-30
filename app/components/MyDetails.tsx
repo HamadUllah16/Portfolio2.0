@@ -2,25 +2,26 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
+import SocialButtons from './SocialButtons'
 
 const pfp = '/pfp.jpg'
 
 
 function MyDetails() {
     return (
-        <div className="flex flex-col gap-6
+        <div className="flex flex-col gap-6 rounded-lg
         lg:w-fit lg:flex-col xl:w-fit lg:p-0 lg:max-w-60
         md:items-start md:flex-col md:max-w-40
-        max-sm:items-start max-sm:px-5 max-sm:pt-5 max-sm:h-full max-sm:flex-row max-sm:gap-5
+        max-sm:items-start max-sm:px-3 max-sm:py-3 max-sm:h-full max-sm:flex-row max-sm:gap-5 max-sm:border max-sm:bg-border
         sm:items-start sm:justify-start sm:p-0 sm:flex-row
         ">
             <div style={{ borderRadius: '70px', }}
                 className='
                 relative
-                lg:size-60
+                lg:w-full lg:min-h-60
                     md:size-40 md:min-w-40
-                    sm:size-40
-                    max-sm:size-32 max-sm:min-w-32
+                    sm:size-44
+                    max-sm:size-32 max-sm:min-w-32 max-sm:min-h-full
                     '
             >
                 <Image
@@ -40,18 +41,17 @@ function MyDetails() {
             max-sm:w-full max-sm:items-start max-sm:gap-1
             '>
                 <div className='flex flex-col gap-0 items-start'>
-                    <h3 className='text-3xl lg:text-primary font-bold'>
+                    <h3 className='text-3xl lg:text-primary font-bold max-sm:text-2xl'>
                         Hamad Ullah
                     </h3>
 
-                    <h4 className='text-lg text-wrap lg:text-primary'>
+                    <h4 className='text-lg text-wrap lg:text-primary max-sm:text-base'>
                         Front-End Engineer
                     </h4>
                 </div>
-                <p className='text-sm max-sm:hidden '>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
+                <p className='text-sm max-sm:text-xs '>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
 
-
-                <div className='space-y-1'>
+                <div className='space-y-1 sm:visible max-sm:hidden'>
                     <div className='flex gap-3 items-center  text-muted-foreground'>
                         <div className='w-3'>
                             <Building2 size={14} />
@@ -67,7 +67,7 @@ function MyDetails() {
                             </Link>
                         </p>
                     </div>
-                    <div className='flex gap-3 items-center  text-muted-foreground'>
+                    <div className='flex gap-3 items-center  text-muted-foreground sm:visible max-sm:hidden'>
                         <div className='w-3'>
                             <GraduationCap size={14} />
                         </div>
@@ -75,7 +75,7 @@ function MyDetails() {
                             BS Software Engineering
                         </h6>
                     </div>
-                    <div className='flex gap-3 items-center  text-muted-foreground'>
+                    <div className='flex gap-3 items-center  text-muted-foreground sm:visible max-sm:hidden'>
                         <MapPin size={14} />
                         <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
                             Peshawar, Pakistan
@@ -87,7 +87,7 @@ function MyDetails() {
             <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-fit
                 md:hidden
                 `}>
-                <h3 className='text-3xl font-bold md:text-start max-sm:text-center sm:text-center '>
+                <h3 className='text-lg text-wrap lg:text-primary md:text-start max-sm:text-center sm:text-center '>
                     Accomplishments
                 </h3>
                 <div className='flex gap-2 flex-col md:items-start max-sm:items-center sm:items-center'>

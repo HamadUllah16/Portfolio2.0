@@ -37,21 +37,20 @@ export default function RootLayout({
         <div className="
           flex py-5 gap-5 justify-between
           bg-white border rounded-3xl
-          lg:mx-24 lg:h-full lg:gap-16
+          lg:mx-24 lg:h-full lg:gap-6
           xl:mx-40
-          md:p-5 md:min-h-full md:mx-5 md:flex-row
-          sm:p-5 sm:md:5 sm:flex-col sm:h-full
+          md:p-5 md:min-h-full md:mx-5 md:flex-row md:gap-6
+          sm:p-5 sm:md:5 sm:flex-col sm:h-full sm:gap-4
           max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:p-2 max-sm:flex-col max-sm:rounded-none
           lg:overflow-hidden
 
           ">
           <div className="
            flex flex-col gap-3 md:pb-5 max-sm:pb-0
-            xl:w-fit
+            xl:w-fit xl:min-w-[20%]
             lg:col-span-1 lg:relative lg:w-fit
             ">
             <MyDetails />
-            <p className='text-xs sm:hidden px-5 max-sm:block'>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
             <div className="flex justify-center md:mt-10 sm:mt-0 max-sm:mt-0">
               <SocialButtons />
             </div>
@@ -60,10 +59,11 @@ export default function RootLayout({
           <ReduxProvider>
             <CopyEmail />
             <InitialLoading />
-            <div className="flex flex-col gap-5 w-full h-full
+            <div className="flex flex-col gap-5 w-full h-full rounded-lg
             sm:h-full
-            max-sm:w-full max-sm:h-full max-sm:px-2 pb-5
-            lg:overflow-hidden xl:w-full lg:w-full">
+            max-sm:w-full max-sm:h-full max-sm:px-2 py-5 max-sm:border max-sm:bg-border
+            lg:overflow-hidden xl:w-full lg:w-full"
+            >
               <Navbar />
               {/* <Separator /> */}
               {children}
