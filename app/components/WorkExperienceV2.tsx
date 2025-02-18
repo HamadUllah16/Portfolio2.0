@@ -20,7 +20,7 @@ function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
                 {/* graphics */}
                 <div className='flex flex-col items-center gap-2'>
                     {/* top line */}
-                    <div className='flex h-full w-[2px] bg-input' style={{ opacity: experience.to === 'Current' ? 0 : 1 }} />
+                    <div className='flex h-full w-[2px] bg-input max-sm:bg-primary/20' style={{ opacity: experience.to === 'Current' ? 0 : 1 }} />
 
                     {/* dot */}
                     <div className='flex flex-col gap-1'>
@@ -28,18 +28,20 @@ function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
                     </div>
 
                     {/* bottom line */}
-                    <div className='flex h-full w-[2px] bg-input' />
+                    <div className='flex h-full w-[2px] bg-input max-sm:bg-primary/20' />
                 </div>
 
                 {/* actual card */}
                 <div className='flex gap-2 flex-grow overflow-hidden p-2'>
                     {/* card image */}
-                    <div className='h-full w-full max-w-28 bg-input rounded-md relative'>
+                    <div className='flex items-center h-full w-full max-w-28 bg-input max-sm:bg-primary-foreground rounded-md'>
                         <Image
-                            fill
+                            // fill
+                            width={200}
+                            height={200}
                             src={experience.img}
                             alt='a company logo'
-                            className='object-contain p-2'
+                            className='object-contain p-2 max-h-14'
                         />
                     </div>
 

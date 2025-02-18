@@ -25,7 +25,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
 
                 {/* Background Color */}
                 <div
-                    className={`flex h-40 w-72 max-sm:w-full rounded-lg items-center justify-center relative overflow-hidden bg-gradient-to-r from-violet-400 to-purple-300`}
+                    className={`flex h-40 w-72 max-sm:w-full rounded-lg items-center justify-center relative overflow-hidden bg-primary-foreground border`}
                 >
                     {work.image &&
                         <Image

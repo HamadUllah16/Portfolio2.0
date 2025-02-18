@@ -14,7 +14,7 @@ function ExperiencePage() {
     const experiences = [
         { role: 'Web Developer', company: 'Grayhat Developers', img: grayhat, from: 'Jan 2025', to: 'Current', techstack: ["NextJS", "ShadCN", "ZuStand"] },
         { role: 'Front-End Engineer', company: 'Dextro', img: dextro, from: 'May 2024', to: 'Oct 2024', techstack: ["NextJS", "MUI", "Redux", "Axios", "Figma"] },
-        { role: 'Web Developer', company: 'Upwork', img: upwork, from: "Sep 2021", to: "May-2024", techstack: ["HTML", "CSS", "SQL", "WordPress"] }
+        { role: 'Software Engineer', company: 'Upwork', img: upwork, from: "Sep 2021", to: "May-2024", techstack: ["HTML", "CSS", "SQL", "WordPress"] }
     ]
 
     return (
