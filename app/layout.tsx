@@ -19,6 +19,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Hamad - Portfolio",
   description: "View resume, projects, and experience of Hamad",
+  other: {
+    "google-site-verification": "4VExX2I7AtPUVVGGWLTbiwxVDhSo4K5GDMtLLQa4xLc",
+  },
 };
 
 export default function RootLayout({
