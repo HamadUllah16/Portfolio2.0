@@ -48,7 +48,7 @@ function MyDetails() {
                         Front-End Engineer
                     </h4>
                 </div>
-                <p className='text-sm max-sm:text-xs '>A software engineer with 6 months of experience in building intuitive, effective and interactive user interfaces.</p>
+                <p className='text-sm max-sm:text-xs '>A software engineer experienced in building intuitive, effective and interactive user interfaces.</p>
 
                 <div className='space-y-1 sm:visible max-sm:hidden'>
                     <div className='flex gap-3 items-center  text-muted-foreground'>
