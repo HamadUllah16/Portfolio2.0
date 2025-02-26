@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: `${baseUrl}/`,
             lastModified: new Date().toISOString(),
+            priority: 1
         },
         {
             url: `${baseUrl}/experience`,
