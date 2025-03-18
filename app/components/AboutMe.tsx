@@ -22,17 +22,10 @@ function AboutMe() {
                 animate='show'
             >
                 <p>
-                    I am a <strong>Software Engineer</strong> with a passion for designing and building user-centric interfaces that deliver exceptional user experiences. My journey in tech began in 2022 as a Front-End Developer, where I initially struggled with elements like color schemes, typography, and design principles. Over time, I developed a deep appreciation for these details, which now significantly influence my work.
+                    I am a <strong>Software Engineer</strong> with a passion for designing and building user-centric applications that deliver exceptional user experiences. My journey in tech began in 2022 as a Front-End Developer, where I initially struggled with building effective, intuitive and usable applications but as time passed, I learned how to overcome these challenges.
                 </p>
                 <p>
-                    In 2023, I enrolled in <strong>Meta Front-End Developer Specialization</strong> on Coursera through DLSEI, thanks to Higher Education Commission Pakistan. This intensive program enhanced my skills in <strong>React</strong>, <strong>Bootstrap</strong>, and <strong>CSS pre-processors</strong> through hands-on projects and rigorous assessments. Completing the specialization within six months was a rewarding challenge, culminating in a portfolio that showcased my growth and achievements. React taught me that front-end development is more than just visual design—it’s about crafting dynamic, interactive user interfaces powered by robust business logic.
-                </p>
-                <p>
-                    To further expand my expertise, I delved into <strong>Next.js</strong>, a framework that transformed my approach to web application development. While concepts like static site generation, client components and server components initially seemed complex, I soon recognized their power in enabling <strong>serverless architecture</strong>, <strong>SEO optimization</strong>, and <strong>high-performance applications</strong>. Managing both client-side and server-side logic within a single repository streamlined development and deepened my appreciation for full-stack capabilities.
-                </p>
-
-                <p>
-                    Currently, I am working at <strong>Grayhat</strong> as a Web Developer.
+                    Currently, I am working at <strong className="border px-2 rounded-lg bg-gray-300">Grayhat Developers</strong> as an Associate Software Engineer.
                 </p>
             </motion.div>
         </div>

@@ -12,9 +12,13 @@ const grayhat = '/grayhat.png'
 function ExperiencePage() {
 
     const experiences = [
-        { role: 'Web Developer', company: 'Grayhat Developers', img: grayhat, from: 'Jan 2025', to: 'Current', techstack: ["NextJS", "ShadCN", "ZuStand"] },
-        { role: 'Front-End Engineer', company: 'Dextro', img: dextro, from: 'May 2024', to: 'Oct 2024', techstack: ["NextJS", "MUI", "Redux", "Axios", "Figma"] },
-        { role: 'Software Engineer', company: 'Upwork', img: upwork, from: "Sep 2021", to: "May-2024", techstack: ["HTML", "CSS", "SQL", "WordPress"] }
+        { role: 'Associate Software Engineer', company: 'Grayhat Developers', img: grayhat, from: 'March 2025', to: 'Current', techstack: ["NextJS", "ShadCN", "ZuStand"], type: "Full-time", href: "https://www.grayhat.com.pk/" },
+
+        { role: 'Web Developer', company: 'Grayhat Developers', img: grayhat, from: 'Jan 2025', to: 'March 2025', techstack: ["NextJS", "ShadCN", "ZuStand"], type: "Part-time", href: "https://www.grayhat.com.pk/" },
+
+        { role: 'Front-End Engineer', company: 'Dextro', img: dextro, from: 'May 2024', to: 'Oct 2024', techstack: ["NextJS", "MUI", "Redux", "Axios", "Figma"], type: "Part-time", href: "https://dextro.dev/" },
+
+        { role: 'Software Engineer', company: 'Upwork', img: upwork, from: "Sep 2021", to: "May-2024", techstack: ["HTML", "CSS", "SQL", "WordPress"], type: "Part-time", href: "#" }
     ]
 
     return (
