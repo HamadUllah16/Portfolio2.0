@@ -9,7 +9,6 @@ import InitialLoading from "./components/InitialLoading";
 import MobileNav from "./components/MobileNav";
 import MyDetails from "./components/MyDetails";
 import SocialButtons from "./components/SocialButtons";
-import { Separator } from "../components/ui/separator";
 
 const poppins = Poppins({
   weight: ['300', '700'],
