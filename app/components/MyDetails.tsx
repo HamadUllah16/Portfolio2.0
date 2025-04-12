@@ -2,26 +2,27 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
+import SocialButtons from './SocialButtons'
 
 const pfp = '/pfp.jpg'
 
 
 function MyDetails() {
     return (
-        <div className="flex flex-col gap-6 rounded-lg
-        lg:w-fit lg:flex-col xl:w-fit lg:p-0 lg:max-w-60
-        md:items-start md:flex-col md:max-w-40
+        <div className="flex flex-col gap-5 rounded-lg w-full
+        lg:w-full lg:flex-col xl:w-full lg:p-0
+        md:items-center md:flex-row md:w-full
         max-sm:items-start max-sm:px-3 max-sm:py-3 max-sm:h-full max-sm:flex-row max-sm:gap-5 max-sm:border max-sm:bg-border
         sm:items-start sm:justify-start sm:p-0 sm:flex-row
         ">
             <div style={{ borderRadius: '70px', }}
                 className='
-                relative
-                lg:w-full lg:min-h-60
-                    md:size-40 md:min-w-40
-                    sm:size-44
-                    max-sm:size-32 max-sm:min-w-32 max-sm:min-h-full
-                    '
+            relative
+            lg:w-full lg:min-h-60
+            md:size-40 md:min-w-40
+            sm:size-44
+            max-sm:size-32 max-sm:min-w-32 max-sm:min-h-full
+            '
             >
                 <Image
                     src={pfp}
@@ -33,13 +34,15 @@ function MyDetails() {
 
 
 
-            <div className='
+            <div
+                className='
             flex flex-col justify-center gap-3 w-full
             md:w-full
             sm:w-fit sm:col-span-2 sm:items-start
             max-sm:w-full max-sm:items-start max-sm:gap-1
-            '>
-                <div className='flex flex-col gap-0 items-start'>
+            '
+            >
+                <div className='flex flex-col gap-0 w-full sm:text-start md:text-start lg:items-center'>
                     <h3 className='text-3xl lg:text-primary font-bold max-sm:text-2xl'>
                         Hamad Ullah
                     </h3>
@@ -48,7 +51,11 @@ function MyDetails() {
                         Front-End Engineer
                     </h4>
                 </div>
-                <p className='text-sm max-sm:text-xs '>A software engineer experienced in building intuitive, effective and interactive user interfaces.</p>
+                <p className='text-sm max-sm:text-xs text-justify '>A software engineer experienced in building intuitive, effective and interactive user interfaces.</p>
+
+                <div className='md:hidden sm:hidden max-sm:visible'>
+                    <SocialButtons />
+                </div>
 
                 <div className='space-y-1 sm:visible max-sm:hidden'>
                     <div className='flex gap-3 items-center  text-muted-foreground'>
@@ -56,7 +63,7 @@ function MyDetails() {
                             <Building2 size={14} />
                         </div>
                         <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                            Web Developer Intern {""}@
+                            Associate Software Engineer {""}@
                             <Link
                                 className='underline'
                                 href={'https://www.grayhat.com.pk/'}
