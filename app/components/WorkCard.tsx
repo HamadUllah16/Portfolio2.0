@@ -25,14 +25,13 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
 
                 {/* Background Color */}
                 <div
-                    className={`flex h-40 w-72 max-sm:w-full rounded-lg items-center justify-center relative overflow-hidden bg-primary-foreground border`}
+                    className={`flex h-40 w-72 max-sm:w-full rounded-lg items-center justify-center relative overflow-hidden bg-primary-foreground border relative`}
                 >
                     {work.image &&
                         <Image
                             src={work.image}
                             alt='a logo for the project'
-                            height={150}
-                            width={150}
+                            fill
                             style={{ objectFit: 'contain' }}
                         />
                     }
@@ -41,11 +40,13 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                     <div
                         className={`max-sm:hidden ${show ? 'opacity-100 bg-opacity-90' : 'opacity-0 bg-opacity-0'} ${bgColor ?? 'bg-red-400'} flex gap-2 items-center justify-center h-full w-full absolute z-10 transition-all duration-300 ease-in-out`}
                     >
-                        <Link href={work?.github} target='_blank'>
-                            <Button variant={'outline'}>
-                                GitHub
-                            </Button>
-                        </Link>
+                        {work?.github &&
+                            <Link href={work?.github} target='_blank'>
+                                <Button variant={'outline'}>
+                                    GitHub
+                                </Button>
+                            </Link>
+                        }
                         <Link href={work?.preview} target='_blank'>
                             <Button>
                                 Preview

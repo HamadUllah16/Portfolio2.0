@@ -70,7 +70,7 @@ export default function Home() {
       >
         {error && <p className="text-red-500">{error}</p>}
         {allWork.length > 0 ? (
-          [...allWork].sort((a: any, b: any) => a.id - b.id).map((work: any, index) => (
+          [...allWork].sort((a: any, b: any) => b.id - a.id).map((work: any, index) => (
             <WorkCard
               key={work.id}
               work={work}
