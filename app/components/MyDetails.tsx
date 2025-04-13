@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
 import SocialButtons from './SocialButtons'
+import { CompanyHoverCard } from './CompanyHoverCard'
 
 const pfp = '/pfp.jpg'
 
@@ -48,10 +49,10 @@ function MyDetails() {
                     </h3>
 
                     <h4 className='text-lg text-wrap lg:text-primary max-sm:text-base'>
-                        Front-End Engineer
+                        Associate Software Engineer
                     </h4>
                 </div>
-                <p className='text-sm max-sm:text-xs text-justify '>A software engineer experienced in building intuitive, effective and interactive user interfaces.</p>
+                <p className='text-sm max-sm:text-xs text-justify '>A Software Engineer specialized in building Full Stack Web Applications and Blockchain dApps.</p>
 
                 <div className='md:hidden sm:hidden max-sm:visible'>
                     <SocialButtons />
@@ -62,16 +63,15 @@ function MyDetails() {
                         <div className='w-3'>
                             <Building2 size={14} />
                         </div>
-                        <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                            Associate Software Engineer {""}@
-                            <Link
-                                className='underline'
-                                href={'https://www.grayhat.com.pk/'}
-
-                            >
-                                Grayhat
-                            </Link>
-                        </p>
+                        <CompanyHoverCard
+                            size='sm'
+                            label='Associate Software Engineer'
+                            companyName='@Grayhat'
+                            companyLogo='/grayhat.png'
+                            companyDescription='We build cool stuff. Developer Experience, AI, XR, Gaming, Web & App Development.'
+                            companyJoinDate='Jan 2025'
+                            companyLink='https://www.grayhat.com.pk/'
+                        />
                     </div>
                     <div className='flex gap-3 items-center  text-muted-foreground sm:visible max-sm:hidden'>
                         <div className='w-3'>
@@ -90,7 +90,7 @@ function MyDetails() {
                 </div>
             </div>
 
-            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-fit
+            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-full
                 md:hidden
                 `}>
                 <h3 className='text-lg text-wrap lg:text-primary md:text-start max-sm:text-center sm:text-center '>
@@ -98,7 +98,7 @@ function MyDetails() {
                 </h3>
                 <div className='flex gap-2 flex-col md:items-start max-sm:items-center sm:items-center'>
                     <div className='flex gap-3 items-center'>
-                        <BookOpenCheck size={14} className='text-muted-foreground' />
+                        <BookOpenCheck className='w-3 text-muted-foreground' />
                         <Link
                             href={'https://trustvote-client.vercel.app/'}
                             className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'
@@ -107,9 +107,7 @@ function MyDetails() {
                         </Link>
                     </div>
                     <div className='flex gap-3 items-center'>
-                        <div className='w-3'>
-                            <Award size={14} className='text-muted-foreground' />
-                        </div>
+                        <Award className='w-3 text-muted-foreground' />
                         <Link
                             href={'https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url'}
                             className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'

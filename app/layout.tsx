@@ -39,8 +39,7 @@ export default function RootLayout({
         <div className="
           grid grid-cols-5 justify-between
           bg-white border rounded-3xl
-          lg:mx-24 lg:h-full
-          xl:mx-40
+           lg:h-full
           md:min-h-full md:mx-5 md:flex-row
           sm:flex-col sm:h-full
           max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:flex-col max-sm:rounded-none
