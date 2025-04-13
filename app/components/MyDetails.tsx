@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
 import SocialButtons from './SocialButtons'
+import { CompanyHoverCard } from './CompanyHoverCard'
 
 const pfp = '/pfp.jpg'
 
@@ -48,10 +49,10 @@ function MyDetails() {
                     </h3>
 
                     <h4 className='text-lg text-wrap lg:text-primary max-sm:text-base'>
-                        Front-End Engineer
+                        Associate Software Engineer
                     </h4>
                 </div>
-                <p className='text-sm max-sm:text-xs text-justify '>A software engineer experienced in building intuitive, effective and interactive user interfaces.</p>
+                <p className='text-sm max-sm:text-xs text-justify '>A Software Engineer specialized in building Full Stack Web Applications and Blockchain dApps.</p>
 
                 <div className='md:hidden sm:hidden max-sm:visible'>
                     <SocialButtons />
@@ -62,16 +63,14 @@ function MyDetails() {
                         <div className='w-3'>
                             <Building2 size={14} />
                         </div>
-                        <p className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                            Associate Software Engineer {""}@
-                            <Link
-                                className='underline'
-                                href={'https://www.grayhat.com.pk/'}
-
-                            >
-                                Grayhat
-                            </Link>
-                        </p>
+                        <CompanyHoverCard
+                            label='Associate Software Engineer'
+                            companyName='@Grayhat'
+                            companyLogo='/grayhat.png'
+                            companyDescription='We build cool stuff. Developer Experience, AI, XR, Gaming, Web & App Development.'
+                            companyJoinDate='Jan 2025'
+                            companyLink='https://www.grayhat.com.pk/'
+                        />
                     </div>
                     <div className='flex gap-3 items-center  text-muted-foreground sm:visible max-sm:hidden'>
                         <div className='w-3'>
