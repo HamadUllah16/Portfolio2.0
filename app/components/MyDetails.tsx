@@ -64,6 +64,7 @@ function MyDetails() {
                             <Building2 size={14} />
                         </div>
                         <CompanyHoverCard
+                            size='sm'
                             label='Associate Software Engineer'
                             companyName='@Grayhat'
                             companyLogo='/grayhat.png'
@@ -89,7 +90,7 @@ function MyDetails() {
                 </div>
             </div>
 
-            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-fit
+            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-full
                 md:hidden
                 `}>
                 <h3 className='text-lg text-wrap lg:text-primary md:text-start max-sm:text-center sm:text-center '>
@@ -97,7 +98,7 @@ function MyDetails() {
                 </h3>
                 <div className='flex gap-2 flex-col md:items-start max-sm:items-center sm:items-center'>
                     <div className='flex gap-3 items-center'>
-                        <BookOpenCheck size={14} className='text-muted-foreground' />
+                        <BookOpenCheck className='w-3 text-muted-foreground' />
                         <Link
                             href={'https://trustvote-client.vercel.app/'}
                             className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'
@@ -106,9 +107,7 @@ function MyDetails() {
                         </Link>
                     </div>
                     <div className='flex gap-3 items-center'>
-                        <div className='w-3'>
-                            <Award size={14} className='text-muted-foreground' />
-                        </div>
+                        <Award className='w-3 text-muted-foreground' />
                         <Link
                             href={'https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url'}
                             className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'

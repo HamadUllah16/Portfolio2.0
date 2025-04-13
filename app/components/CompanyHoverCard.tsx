@@ -11,14 +11,15 @@ type TCompany = {
     companyJoinDate: string;
     companyLink: string;
     label: string
+    size: "sm" | "lg" | "default"
 }
 
-export function CompanyHoverCard({ companyName, companyLogo, companyDescription, companyJoinDate, companyLink, label }: TCompany) {
+export function CompanyHoverCard({ companyName, companyLogo, companyDescription, companyJoinDate, companyLink, label, size }: TCompany) {
     return (
         <Link href={companyLink} target="_blank" rel="noopener noreferrer">
             <HoverCard>
                 <HoverCardTrigger asChild>
-                    <Button variant="link" size={'sm'} className="text-xs px-0">{label} {companyName}</Button>
+                    <Button variant="link" size={size} className="p-0 h-fit">{label} {companyName}</Button>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-80">
                     <div className="flex justify-between space-x-4">
