@@ -37,10 +37,10 @@ export default function RootLayout({
 
         {/* <Header /> */}
         <div className="
-          grid grid-cols-5 justify-between
+          flex justify-between
           bg-white border rounded-3xl
-           lg:h-full
-          md:min-h-full md:mx-5 md:flex-row
+          lg:h-full lg:flex-row
+          md:min-h-full md:mx-5 md:flex-col
           sm:flex-col sm:h-full
           max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:flex-col max-sm:rounded-none
           overflow-x-hidden
@@ -48,11 +48,11 @@ export default function RootLayout({
           <div className="
            p-5
            flex flex-col gap-3
-            xl:w-fit xl:min-w-[20%]
-            lg:col-span-1 lg:relative lg:w-fit  lg:border-r
-            md:pb-5 md:border-b md:col-span-full
-            max-sm:pb-0 max-sm:col-span-full
-            sm:col-span-full
+            xl:w-[20%]
+            lg:w-[30%] lg:relative  lg:border-r
+            md:pb-5 md:border-b md:w-full
+            max-sm:pb-0 max-sm:w-full
+            sm:w-full
             ">
             <MyDetails />
             <div className="flex justify-center md:mt-10 sm:mt-0 max-sm:mt-0 max-sm:hidden visible">
@@ -60,7 +60,7 @@ export default function RootLayout({
             </div>
           </div>
           {/* <Separator orientation="vertical" className="md:block max-sm:hidden sm:hidden" /> */}
-          <div className="h-full lg:col-span-4 md:col-span-full sm:col-span-full max-sm:col-span-full overflow-auto lg:pl-5 md:p-5 sm:p-5 max-sm:p-5">
+          <div className="h-full w-full overflow-auto lg:pl-5 md:p-5 sm:p-5 max-sm:p-5">
             <ReduxProvider>
               <CopyEmail />
               <InitialLoading />
