@@ -24,7 +24,7 @@ export function CompanyHoverCard({ companyName, companyLogo, companyDescription,
                 <HoverCardContent className="w-80">
                     <div className="flex justify-between space-x-4">
                         <Avatar>
-                            <AvatarImage src={companyLogo} />
+                            <AvatarImage className="object-contain" src={companyLogo} />
                             <AvatarFallback>{companyName}</AvatarFallback>
                         </Avatar>
                         <div className="space-y-1">

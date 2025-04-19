@@ -4,6 +4,7 @@ import React from 'react'
 import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
 import SocialButtons from './SocialButtons'
 import { CompanyHoverCard } from './CompanyHoverCard'
+import profileData from '../../lib/data/my-details.json'
 
 const pfp = '/pfp.jpg'
 
@@ -45,14 +46,14 @@ function MyDetails() {
             >
                 <div className='flex flex-col gap-0 w-full sm:text-start md:text-start lg:items-center'>
                     <h3 className='text-3xl lg:text-primary font-bold max-sm:text-2xl'>
-                        Hamad Ullah
+                        {profileData.name}
                     </h3>
 
                     <h4 className='text-lg text-wrap lg:text-primary max-sm:text-base'>
-                        Associate Software Engineer
+                        {profileData.role.title}
                     </h4>
                 </div>
-                <p className='text-sm max-sm:text-xs text-justify '>A Software Engineer specialized in building Full Stack Web Applications and Blockchain dApps.</p>
+                <p className='text-sm max-sm:text-xs text-justify '>{profileData.headline}</p>
 
                 <div className='md:hidden sm:hidden max-sm:visible'>
                     <SocialButtons />
@@ -65,12 +66,12 @@ function MyDetails() {
                         </div>
                         <CompanyHoverCard
                             size='sm'
-                            label='Associate Software Engineer'
-                            companyName='@Grayhat'
-                            companyLogo='/grayhat.png'
-                            companyDescription='We build cool stuff. Developer Experience, AI, XR, Gaming, Web & App Development.'
-                            companyJoinDate='Jan 2025'
-                            companyLink='https://www.grayhat.com.pk/'
+                            label={profileData.role.title}
+                            companyName={`@${profileData.role.company.name}`}
+                            companyLogo={profileData.role.company.logo}
+                            companyDescription={profileData.role.company.description}
+                            companyJoinDate={profileData.role.company.joinDate}
+                            companyLink={profileData.role.company.website}
                         />
                     </div>
                     <div className='flex gap-3 items-center  text-muted-foreground sm:visible max-sm:hidden'>
@@ -78,13 +79,13 @@ function MyDetails() {
                             <GraduationCap size={14} />
                         </div>
                         <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                            BS Software Engineering
+                            {profileData.degree}
                         </h6>
                     </div>
                     <div className='flex gap-3 items-center  text-muted-foreground sm:visible max-sm:hidden'>
                         <MapPin size={14} />
                         <h6 className='md:max-w-80 max-sm:w-full text-xs text-wrap lg:text-primary'>
-                            Peshawar, Pakistan
+                            {profileData.location}
                         </h6>
                     </div>
                 </div>

@@ -1,0 +1,16 @@
+{
+    "name": "Hamad Ullah",
+    "headline": "A Software Engineer specialized in engineering and implementing Front-End solutions.",
+    "role": {
+        "title": "Associate Software Engineer",
+        "company": {
+            "name": "Grayhat",
+            "logo": "/grayhat.png",
+            "description": "We build cool stuff. Developer Experience, AI, XR, Gaming, Web & App Development.",
+            "website": "https://www.grayhat.com.pk/",
+            "joinDate": "Jan 2025"
+        }
+    },
+    "location": "Islamabad, Pakistan",
+    "degree": "BS Software Engineering"
+}
