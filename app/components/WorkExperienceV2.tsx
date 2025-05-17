@@ -17,9 +17,9 @@ interface ExperienceType {
 function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
 
     return (
-        <div className='flex flex-col group w-fit'>
+        <div className='group w-full pl-2'>
 
-            <div className='flex gap-5 w-fit'>
+            <div className='flex gap-5'>
 
                 {/* graphics */}
                 <div className='flex flex-col items-center gap-2'>
@@ -36,14 +36,14 @@ function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
                 </div>
 
                 {/* actual card */}
-                <div className='flex gap-2 flex-grow overflow-hidden p-2'>
+                <div className='flex gap-3 flex-grow overflow-hidden p-2'>
                     {/* card image */}
-                    <Link href={experience.href}>
+                    <Link href={experience.href} className='min-w-24'>
                         <div className='flex flex-col items-center justify-center h-full w-full max-w-28 bg-input max-sm:bg-primary-foreground rounded-md relative shadow-sm group-hover:shadow-md transition-all ease-in-out duration-300 '>
                             <Image
                                 // fill
                                 width={200}
-                                height={200}
+                                height={300}
                                 src={experience.img}
                                 alt='a company logo'
                                 className='object-contain p-2 max-h-14 group-hover:scale-90 group-hover:-translate-y-2 transition-all ease-in-out duration-300'
@@ -53,7 +53,7 @@ function WorkExperienceV2({ experience }: { experience: ExperienceType }) {
                     </Link>
 
                     {/* card texts */}
-                    <div className='flex flex-col gap-1'>
+                    <div className='flex flex-col gap-1 col-span-7'>
                         <div>
                             <h6 className='text-lg font-bold'>{experience.role}</h6>
                             <p className='text-xs border w-fit rounded-full px-2 bg-green-200 text-green-950'>{experience.type}</p>

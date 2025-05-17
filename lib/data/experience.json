@@ -1,0 +1,44 @@
+{
+    "experiences": [
+        {
+            "role": "Associate Software Engineer",
+            "company": "Grayhat Developers",
+            "img": "/grayhat.png",
+            "from": "March 2025",
+            "to": "Current",
+            "techstack": ["NextJS", "ShadCN", "Zod", "React Query"],
+            "type": "Onsite | Full-time",
+            "href": "https://www.grayhat.com.pk/"
+        },
+        {
+            "role": "Intern Web Developer",
+            "company": "Grayhat Developers", 
+            "img": "/grayhat.png",
+            "from": "Jan 2025",
+            "to": "March 2025",
+            "techstack": ["NextJS", "ShadCN", "ZuStand"],
+            "type": "Remote | Part-time",
+            "href": "https://www.grayhat.com.pk/"
+        },
+        {
+            "role": "Front-End Engineer",
+            "company": "Dextro",
+            "img": "/dextro.png", 
+            "from": "May 2024",
+            "to": "Oct 2024",
+            "techstack": ["NextJS", "MUI", "Redux", "Axios", "Figma"],
+            "type": "Remote | Part-time",
+            "href": "https://dextro.dev/"
+        },
+        {
+            "role": "Software Engineer (Freelance)",
+            "company": "Upwork",
+            "img": "/upwork.png",
+            "from": "Sep 2021", 
+            "to": "Present",
+            "techstack": ["NextJS", "Redux Toolkit", "Axios", "ShadCN", "Motion", "WordPress"],
+            "type": "Remote | Part-time",
+            "href": "#"
+        }
+    ]
+}

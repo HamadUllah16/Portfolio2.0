@@ -2,8 +2,9 @@
     "name": "Hamad Ullah",
     "headline": "A Software Engineer specialized in engineering and implementing Front-End solutions.",
     "role": {
-        "title": "Associate Software Engineer",
+        "title": "Software Engineer",
         "company": {
+            "role": "ASE",
             "name": "Grayhat",
             "logo": "/grayhat.png",
             "description": "We build cool stuff. Developer Experience, AI, XR, Gaming, Web & App Development.",

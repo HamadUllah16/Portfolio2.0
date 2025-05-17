@@ -39,7 +39,7 @@ function AboutMe() {
                     Currently, I am working at <strong className="border px-2 rounded-lg bg-gray-300">
                         <CompanyHoverCard
                             size="lg"
-                            label=''
+                            role='ASE'
                             companyName='@Grayhat'
                             companyLogo='/grayhat.png'
                             companyDescription='We build cool stuff. Developer Experience, AI, XR, Gaming, Web & App Development.'

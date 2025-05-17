@@ -31,43 +31,39 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased h-dvh md:h-dvh max-sm:h-full sm:h-full relative p-5 max-sm:p-0 overflow-auto sm:bg-slate-800 max-sm:bg-white`}
+        className={`${poppins.className} antialiased max-h-dvh h-full md:h-dvh max-sm:h-full sm:h-full relative p-5 max-sm:p-0 sm:bg-slate-800 max-sm:bg-white`}
       >
         <Toaster position="top-center" />
 
-        {/* <Header /> */}
         <div className="
-          flex justify-between
+          grid grid-cols-12 h-full
+          lg:h-full
+          md:h-fit
           bg-white border rounded-3xl
-          lg:h-full lg:flex-row
-          md:min-h-full md:mx-5 md:flex-col
-          sm:flex-col sm:h-full
-          max-sm:-bottom-5 max-sm:h-full max-sm:w-full max-sm:flex-col max-sm:rounded-none
-          overflow-x-hidden
           ">
           <div className="
+          col-span-3 overflow-auto
            p-5
            flex flex-col gap-3
-            xl:w-[20%]
-            lg:w-[30%] lg:relative  lg:border-r
-            md:pb-5 md:border-b md:w-full
-            max-sm:pb-0 max-sm:w-full
-            sm:w-full
+            lg:relative lg:border-r lg:border-b-0 lg:col-span-3
+            md:border-b-1 md:col-span-12 md:pb-0
+            sm:col-span-12
+            max-sm:pb-0 max-sm:col-span-12
             ">
             <MyDetails />
-            <div className="flex justify-center md:mt-10 sm:mt-0 max-sm:mt-0 max-sm:hidden visible">
+            <div className="flex justify-center lg:mt-5 md:mt-5 sm:mt-0 max-sm:mt-0 max-sm:hidden visible">
               <SocialButtons />
             </div>
           </div>
           {/* <Separator orientation="vertical" className="md:block max-sm:hidden sm:hidden" /> */}
-          <div className="h-full w-full overflow-auto lg:pl-5 md:p-5 sm:p-5 max-sm:p-5">
+          <div className="col-span-9 overflow-auto w-full lg:pl-5 lg:col-span-9 md:p-5 sm:col-span-12 sm:p-5 max-sm:p-5 max-sm:col-span-12">
             <ReduxProvider>
               <CopyEmail />
               <InitialLoading />
-              <div className="flex flex-col gap-5 w-full h-full rounded-lg
+              <div className="flex flex-col gap-5 w-full overflow-auto rounded-lg
             sm:h-full
             max-sm:w-full max-sm:h-full max-sm:px-2 py-5 max-sm:border max-sm:bg-border
-            lg:overflow-hidden xl:w-full lg:w-full"
+            xl:w-full lg:w-full"
               >
                 <Navbar />
                 {/* <Separator /> */}

@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
-import { Award, BookOpenCheck, Building2, GraduationCap, MapPin } from 'lucide-react'
+import { Building2, GraduationCap, MapPin } from 'lucide-react'
 import SocialButtons from './SocialButtons'
 import { CompanyHoverCard } from './CompanyHoverCard'
 import profileData from '../../lib/data/my-details.json'
@@ -19,7 +18,7 @@ function MyDetails() {
         ">
             <div style={{ borderRadius: '70px', }}
                 className='
-            relative
+            relative max-w-[400px] max-h-[400px]
             lg:w-full lg:min-h-60
             md:size-40 md:min-w-40
             sm:size-44
@@ -66,7 +65,7 @@ function MyDetails() {
                         </div>
                         <CompanyHoverCard
                             size='sm'
-                            label={profileData.role.title}
+                            role={profileData.role.company.role}
                             companyName={`@${profileData.role.company.name}`}
                             companyLogo={profileData.role.company.logo}
                             companyDescription={profileData.role.company.description}
@@ -89,38 +88,6 @@ function MyDetails() {
                         </h6>
                     </div>
                 </div>
-            </div>
-
-            <div className={`flex flex-col gap-3 sm:hidden max-sm:hidden lg:flex lg:w-full
-                md:hidden
-                `}>
-                <h3 className='text-lg text-wrap lg:text-primary md:text-start max-sm:text-center sm:text-center '>
-                    Accomplishments
-                </h3>
-                <div className='flex gap-2 flex-col md:items-start max-sm:items-center sm:items-center'>
-                    <div className='flex gap-3 items-center'>
-                        <BookOpenCheck className='w-3 text-muted-foreground' />
-                        <Link
-                            href={'https://trustvote-client.vercel.app/'}
-                            className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'
-                        >
-                            Decentralized Electronic Voting System
-                        </Link>
-                    </div>
-                    <div className='flex gap-3 items-center'>
-                        <Award className='w-3 text-muted-foreground' />
-                        <Link
-                            href={'https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url'}
-                            className='md:max-w-80 max-sm:w-full underline text-xs text-wrap'
-                        >
-                            Meta Front-End Specialization
-                        </Link>
-                    </div>
-                </div>
-
-                {/* <p className='text-sm'>
-                        Press <span className='px-2 py-1 text-white bg-slate-600 rounded-lg'>C</span> to copy email
-                        </p> */}
             </div>
         </div>
 
