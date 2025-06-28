@@ -18,11 +18,11 @@ function MyDetails() {
         ">
             <div style={{ borderRadius: '70px', }}
                 className='
-            relative max-w-[400px] max-h-[400px]
-            lg:w-full lg:min-h-60
+            relative max-w-[300px] max-h-[300px]
+            lg:w-full lg:min-h-52
             md:size-40 md:min-w-40
             sm:size-44
-            max-sm:size-32 max-sm:min-w-32 max-sm:min-h-full
+            max-sm:size-32 max-sm:min-w-32 max-sm:min-h-full max-sm:hidden
             '
             >
                 <Image
