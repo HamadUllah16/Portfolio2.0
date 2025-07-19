@@ -4,8 +4,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './redux/store';
 import { setAllWork } from './redux/features/work';
 import { motion } from "motion/react"
-import WorkCard from './components/WorkCard';
-import LoadingWorkCard from './components/LoadingWorkCard';
+import WorkCard, { WorkCardProps } from './components/WorkCard';
+import SmallWorkCard from './components/SmallWorkCard';
+
+const rubyLogo = "/logoWithName.png"
+
+const workProject: WorkCardProps = {
+  image: rubyLogo,
+  // github: 'https://github.com',
+  preview: 'https://www.heyruby.ai/',
+  title: 'Ruby - Your Sales Wingman',
+  description: 'Ruby automates account research, giving you company insights, news, and sales angles. So you\'re always pitch-ready in minutes, not hours.',
+  technologies: [
+    'Next.js',
+    'Tailwind CSS',
+    'TypeScript',
+  ],
+  status: "V2",
+  id: "1",
+}
 
 export default function Home() {
   const { allWork } = useSelector((state: RootState) => state.work)
@@ -46,12 +63,13 @@ export default function Home() {
     <>
 
       <motion.h3 initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className='text-2xl font-bold'>
-        All Projects
+        What I&apos;m Working On
       </motion.h3>
       <motion.div
         className="
+        overflow-auto
         p-5
-      md:overflow-y-scroll
+      md:overflow-auto
       sm:py-1 sm:h-full
       max-sm:rounded-2xl max-sm:py-3 sm:rounded-2xl
       flex flex-col py-5 rounded-md space-y-3 h-full relative"
@@ -69,7 +87,18 @@ export default function Home() {
         animate='show'
       >
         {error && <p className="text-red-500">{error}</p>}
-        {allWork.length > 0 ? (
+        <WorkCard work={workProject} bgColor={colors[0]} />
+        <div className="h-8" />
+        <h4 className="text-xl font-semibold mb-2 mt-2">Other Projects</h4>
+        <div className="flex flex-wrap gap-4 pb-2">
+          {allWork
+            .filter((proj: WorkCardProps) => proj.id !== workProject.id)
+            .reverse()
+            .map((proj: WorkCardProps) => (
+              <SmallWorkCard key={proj.id} work={proj} />
+            ))}
+        </div>
+        {/* {allWork.length > 0 ? (
           [...allWork].sort((a: any, b: any) => b.id - a.id).map((work: any, index) => (
             <WorkCard
               key={work.id}
@@ -83,7 +112,7 @@ export default function Home() {
               <LoadingWorkCard key={each} />
             )
           })
-        }
+        } */}
       </ motion.div>
     </>
   );

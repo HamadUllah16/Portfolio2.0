@@ -7,7 +7,18 @@ import { LinkIcon } from 'lucide-react';
 import { motion } from 'motion/react'
 import Image from 'next/image';
 
-function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, image: string, github: string, preview: string, title: string, description: string, technologies: string[], status: string } }) {
+export type WorkCardProps = {
+    id: string;
+    image: string;
+    github?: string;
+    preview: string;
+    title: string;
+    description: string;
+    technologies: string[];
+    status: string;
+}
+
+function WorkCard({ work, bgColor }: { bgColor: string, work: WorkCardProps }) {
     const [show, setShow] = useState(false);
     return (
         <motion.div
@@ -32,7 +43,7 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                             src={work.image}
                             alt='a logo for the project'
                             fill
-                            style={{ objectFit: 'contain' }}
+                        style={{ objectFit: 'contain', padding: '10px' }}
                         />
                     }
 
@@ -76,11 +87,13 @@ function WorkCard({ work, bgColor }: { bgColor: string, work: { id: string, imag
                 <div
                     className={`${show ? 'max-sm:flex opacity-100 z-30 bg-opacity-90' : 'opacity-0 bg-opacity-0 z-0'} ${bgColor ?? 'bg-red-400'} flex rounded-2xl gap-2 items-center justify-center h-full w-full absolute left-0 top-0 transition-all duration-300 ease-in-out sm:hidden`}
                 >
+                    {work?.github &&
                     <Link href={work?.github} target='_blank'>
                         <Button variant={'outline'}>
                             GitHub
                         </Button>
                     </Link>
+                    }
                     <Link href={work?.preview} target='_blank'>
                         <Button>
                             Preview
