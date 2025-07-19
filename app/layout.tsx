@@ -45,7 +45,7 @@ export default function RootLayout({
           col-span-3 overflow-auto
            p-5
            flex flex-col gap-3
-            lg:relative lg:border-r lg:border-b-0 lg:col-span-3
+            lg:relative lg:border-r lg:border-b-0 lg:col-span-2
             md:border-b-1 md:col-span-12 md:pb-0
             sm:col-span-12
             max-sm:pb-0 max-sm:col-span-12
@@ -56,7 +56,7 @@ export default function RootLayout({
             </div>
           </div>
           {/* <Separator orientation="vertical" className="md:block max-sm:hidden sm:hidden" /> */}
-          <div className="col-span-9 overflow-auto w-full lg:pl-5 lg:col-span-9 md:p-5 sm:col-span-12 sm:p-5 max-sm:p-5 max-sm:col-span-12">
+          <div className="col-span-9 overflow-auto w-full lg:pl-5 lg:col-span-10 md:p-5 sm:col-span-12 sm:p-5 max-sm:p-5 max-sm:col-span-12">
             <ReduxProvider>
               <CopyEmail />
               <InitialLoading />
