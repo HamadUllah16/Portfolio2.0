@@ -16,20 +16,20 @@ function MyDetails() {
         max-sm:items-start max-sm:px-3 max-sm:py-3 max-sm:h-full max-sm:flex-row max-sm:gap-5 max-sm:border max-sm:bg-border
         sm:items-start sm:justify-start sm:p-0 sm:flex-row
         ">
-            <div style={{ borderRadius: '70px', }}
-                className='
-            relative max-w-[300px] max-h-[300px]
-            lg:w-full lg:min-h-52
-            md:size-40 md:min-w-40
-            sm:size-44
-            max-sm:size-32 max-sm:min-w-32 max-sm:min-h-full max-sm:hidden
+            <div className='
+            relative bg-red-300 overflow-hidden rounded-3xl
+            xl:size-52 xl:rounded-full
+            lg:w-full lg:min-h-52 lg:rounded-3xl
+            md:size-36 md:min-w-36 md:rounded-3xl
+            sm:w-36 h-36 sm:rounded-3xl
+            max-sm:size-20 max-sm:min-w-20 max-sm:min-h-full max-sm:rounded-full
             '
             >
                 <Image
                     src={pfp}
                     alt='a profile picture'
                     fill
-                    style={{ objectFit: 'cover', borderRadius: '1.3rem' }}
+                    style={{ objectFit: 'cover' }}
                 />
             </div>
 
