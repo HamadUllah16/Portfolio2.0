@@ -11,16 +11,6 @@
             "href": "https://www.grayhat.com.pk/"
         },
         {
-            "role": "Intern Web Developer",
-            "company": "Grayhat Developers", 
-            "img": "/grayhat.png",
-            "from": "Jan 2025",
-            "to": "March 2025",
-            "techstack": ["NextJS", "ShadCN", "ZuStand"],
-            "type": "Remote | Part-time",
-            "href": "https://www.grayhat.com.pk/"
-        },
-        {
             "role": "Front-End Engineer",
             "company": "Dextro",
             "img": "/dextro.png", 
