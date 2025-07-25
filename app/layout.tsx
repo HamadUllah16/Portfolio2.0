@@ -36,19 +36,21 @@ export default function RootLayout({
         <Toaster position="top-center" />
 
         <div className="
-          grid grid-cols-12 h-full
-          lg:h-full
-          md:h-fit
+          flex h-full
+          lg:h-full lg:flex-row
+          md:h-fit md:flex-col
+          sm:flex-col
+          max-sm:flex-col
           bg-white border rounded-3xl
           ">
           <div className="
-          col-span-3 overflow-auto
+          max-w-[25%] overflow-auto
            p-5
            flex flex-col gap-3
-            lg:relative lg:border-r lg:border-b-0 lg:col-span-2
-            md:border-b-1 md:col-span-12 md:pb-0
-            sm:col-span-12
-            max-sm:pb-0 max-sm:col-span-12
+            lg:relative lg:border-r lg:border-b-0 lg:max-w-[25%]
+            md:border-b-1 md:max-w-full md:pb-0
+            sm:max-w-full
+            max-sm:pb-0 max-sm:max-w-full
             ">
             <MyDetails />
             <div className="flex justify-center lg:mt-5 md:mt-5 sm:mt-0 max-sm:mt-0 max-sm:hidden visible">
@@ -56,7 +58,7 @@ export default function RootLayout({
             </div>
           </div>
           {/* <Separator orientation="vertical" className="md:block max-sm:hidden sm:hidden" /> */}
-          <div className="col-span-9 overflow-auto w-full lg:pl-5 lg:col-span-10 md:p-5 sm:col-span-12 sm:p-5 max-sm:p-5 max-sm:col-span-12">
+          <div className="w-full overflow-auto lg:pl-5 md:p-5 sm:p-5 max-sm:p-5 ">
             <ReduxProvider>
               <CopyEmail />
               <InitialLoading />

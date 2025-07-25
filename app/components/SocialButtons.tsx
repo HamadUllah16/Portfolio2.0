@@ -35,19 +35,6 @@ function SocialButtons() {
                         className="group gap-0 min-w-10 min-h-10 rounded-full flex items-center overflow-hidden px-2 transition-all duration-300"
                     >
                         {social.icon}
-                        <span
-                            className="
-                max-w-0 
-                group-hover:max-w-[200px] 
-                group-hover:ml-2
-                overflow-hidden 
-                whitespace-nowrap 
-                transition-all 
-                duration-300
-              "
-                        >
-                            {social.name}
-                        </span>
                     </Button>
                 </a>
             ))}
